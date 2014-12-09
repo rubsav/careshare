@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   
+  get 'ratings/index'
+
+  get 'ratings/show'
+
+  get 'ratings/new'
+
+  get 'ratings/edit'
+
+  get 'ratings/destroy'
+
   resources :trans_cares
   resources :reviews
   resources :users
