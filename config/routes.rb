@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resource :ratings
+
   resources :trans_cares
   resources :reviews
   resources :users, only: [:new, :create]
