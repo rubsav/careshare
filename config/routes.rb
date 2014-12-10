@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  
+  root 'providers#homepage'
+
   resource :ratings
 
-  resources :trans_cares
+  resources :providers
   resources :reviews
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
