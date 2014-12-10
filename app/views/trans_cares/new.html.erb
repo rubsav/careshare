@@ -1,2 +1,37 @@
 <h1>TransCares#new</h1>
 <p>Find me in app/views/trans_cares/new.html.erb</p>
+
+<h1>Add a D.O.C</h1>
+<br>
+<%= form_for @provider do |f| %>
+<div class="main-form">
+	<div>
+		<%= f.label :first_name %>
+		<%= f.text_field :first_name %>
+	</div>
+	<div>
+		<%= f.label :last_name %>
+		<%= f.text_field :last_name %>
+	</div>
+	<div>
+		<%= f.label :role %>
+		<%= f.text_field :role %>
+	</div>
+	<div>
+		<%= f.label :address %>
+		<%= f.text_field :address %>
+	</div>
+	<div>
+		<%= f.label :phone_number %>
+		<%= f.text_field :phone_number %>
+	</div>
+	<div>
+		<%= f.label :wating_period %>
+		<%= f.text_field :wating_period %>
+	</div>
+
+</div>
+<%= f.submit %>
+<%end%>
+
+
