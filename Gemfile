@@ -28,6 +28,10 @@ gem 'spring',        group: :development
 
 gem 'bcrypt-ruby', '~> 3.1.0'
 
+group :development do
+  gem "better_errors"
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
