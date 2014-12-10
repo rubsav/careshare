@@ -1,7 +1,7 @@
 class ProvidersController < ApplicationController
 
   def index
-    @provider = Provider.all
+    @providers = Provider.all
   end
 
   def show
