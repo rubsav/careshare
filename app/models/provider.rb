@@ -1,4 +1,4 @@
-class TransCare < ActiveRecord::Base
+class Provider < ActiveRecord::Base
 
 	class Doctor < TransCare;
 	end

@@ -7,7 +7,7 @@ one:
   organization: MyString
   address: MyString
   phone_number: MyString
-  wating_period: MyString
+  waiting_period: MyString
 
 two:
   first_name: MyString
@@ -16,4 +16,4 @@ two:
   organization: MyString
   address: MyString
   phone_number: MyString
-  wating_period: MyString
+  waiting_period: MyString
