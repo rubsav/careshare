@@ -1,14 +1,14 @@
 class Provider < ActiveRecord::Base
 
-	class Doctor < TransCare;
+	class Doctor < Provider;
 	end
 
 
-	class Counsellor < TransCare;
+	class Counsellor < Provider;
 	end
 
 
-	class Organization < TransCare;
+	class Organization < Provider;
 	end
 
 end

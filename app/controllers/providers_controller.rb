@@ -13,7 +13,7 @@ class ProvidersController < ApplicationController
   end
   
   def create
-    @provider = Provider.new(trans_care_params)
+    @provider = Provider.new(provider_params)
       if @provider.save
         redirect_to @provider, notice: "D.O.C Successfully Added!"
       else
