@@ -10,7 +10,6 @@
 	<%= @provider.waiting_period %>
 </div>
 
-<% if current_user %>
 
   <h3>Reviews for <%= @provider.first_name %></h3>
 
@@ -49,10 +48,6 @@
     </div>
   <% end %>
 
-<% else %>
-  <p>Please <%= link_to "log in", new_session_path %> to add a review.</p> 
-
-<% end %>
 
 <div>
 	<ul>

@@ -7,9 +7,8 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @provider.reviews.build(review_params)
-    @review.user = current_user
     if @review.save
-      redirect_to providers_path, notice: 'Review created succesfully'
+      redirect_to @provider, notice: 'Review created succesfully'
     else
       render 'providers/show'
     end

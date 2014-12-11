@@ -6,9 +6,7 @@ class ProvidersController < ApplicationController
 
   def show
     @provider = Provider.find(params[:id])
-    if current_user
-      @review = @provider.reviews.build
-    end
+    @review = @provider.reviews.build
   end
   
   def new
