@@ -6,6 +6,7 @@ class ProvidersController < ApplicationController
 
   def show
     @provider = Provider.find(params[:id])
+    @review = @provider.reviews.build
   end
   
   def new

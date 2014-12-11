@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   resource :ratings
 
-  resources :providers
-  resources :reviews
+  resources :providers do
+    resources :reviews, only: [:show, :create, :destroy]
+  end
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

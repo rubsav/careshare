@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :correct_user,   only: [:show, :edit, :update]
+  load_and_authorize_resource
+
   def show
   	@user = User.find(params[:id])
   end
@@ -40,13 +41,6 @@ class UsersController < ApplicationController
   private
   def user_params
   	params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation)
-  end
-
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to root_url, notice: "You are not allowed to acces that profile"
-    unless @user == current_user
-    end
   end
   
 end

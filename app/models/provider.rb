@@ -1,6 +1,8 @@
 class Provider < ActiveRecord::Base
 
-
+	has_many :reviews
+	has_many :users, through: :reviews
+	
 	class Doctor < Provider;
 	end
 

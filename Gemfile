@@ -27,9 +27,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'bcrypt-ruby', '~> 3.1.0'
+gem 'cancancan', '~> 1.9'
+
 
 group :development do
   gem "better_errors"
+  gem "binding_of_caller"
+  gem "pry-rails"
+  gem "quiet_assets"
 end
 
 # Use ActiveModel has_secure_password
