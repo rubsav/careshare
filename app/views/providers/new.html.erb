@@ -14,8 +14,8 @@
 		<%= f.text_field :last_name %>
 	</div>
 	<div>
-		<%= f.label :role %>
-		<%= f.text_field :role %>
+		<%= f.label :type %>
+		<%= f.select :type, [['Select Type of Provider', nil], ['Doctor', 1], ['Counsellor', 2], ['Organization', 3]] %>
 	</div>
 	<div>
 		<%= f.label :address %>
@@ -23,7 +23,8 @@
 	</div>
 	<div>
 		<%= f.label :phone_number %>
-		<%= f.text_field :phone_number %>
+		<%= f.telephone_field :phone_number, :size => 10, :maxlength => 10  %> 
+		<!-- can you break up the tele field into multi sections? -->
 	</div>
 	<div>
 		<%= f.label :waiting_period %>
