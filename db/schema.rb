@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210204411) do
+ActiveRecord::Schema.define(version: 20141211020543) do
 
   create_table "providers", force: true do |t|
     t.string   "first_name"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20141210204411) do
     t.string   "role"
     t.string   "organization"
     t.string   "address"
-    t.string   "phone_number"
+    t.string   "phone_number",   limit: 10
     t.string   "waiting_period"
     t.datetime "created_at"
     t.datetime "updated_at"
