@@ -12,7 +12,7 @@
 
 <% if current_user %>
 
-  <h3>Reviews for <%= @provider.name %></h3>
+  <h3>Reviews for <%= @provider.first_name %></h3>
 
   <% @provider.reviews.each do |review| %>
     <p>
@@ -27,7 +27,7 @@
 
   <h4>New Review</h4>
 
-  <%= form_for([@product, @review]) do |f| %>
+  <%= form_for([@provider, @review]) do |f| %>
     <% if @review.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
