@@ -11,19 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211020543) do
+ActiveRecord::Schema.define(version: 20141211190006) do
 
   create_table "providers", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "role"
     t.string   "organization"
-    t.string   "address"
+    t.string   "full_address"
     t.string   "phone_number",   limit: 10
     t.string   "waiting_period"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
+    t.string   "address_line1"
+    t.string   "address_line2"
+    t.string   "city"
+    t.string   "province"
+    t.string   "area_code",      limit: 6
   end
 
   create_table "ratings", force: true do |t|
