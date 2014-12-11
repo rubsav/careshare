@@ -15,20 +15,37 @@
 	</div>
 	<div>
 		<%= f.label :type %>
-		<%= f.select :type, [['Select Type of Provider', nil], ['Doctor', 1], ['Counsellor', 2], ['Organization', 3]] %>
+		<%= f.select :type, [['Select Type of Provider', nil], ['Doctor', "Doctor" ], ['Counsellor', "Counsellor"], ['Organization', "Organization"]] %>
 	</div>
 	<div>
-		<%= f.label :address %>
-		<%= f.text_field :address %>
+		<%= f.label :address_line1 %>
+		<%= f.text_field :address_line1 %>
 	</div>
+	<div>
+		<%= f.label :address_line2 %>
+		<%= f.text_field :address_line2 %>
+	</div>
+	<div>
+		<%= f.label :city %>
+		<%= f.text_field :city %>
+	</div>
+	<div>
+		<%= f.label :province %>
+		<%= f.text_field :province %>
+	</div>
+	<div>
+		<%= f.label :area_code %>
+		<%= f.text_field :area_code %>
+	</div>
+
 	<div>
 		<%= f.label :phone_number %>
 		<%= f.telephone_field :phone_number, :size => 10, :maxlength => 10  %> 
 		<!-- can you break up the tele field into multi sections? use JS -->
 	</div>
 	<div>
-		<%= f.label :waiting_period %>
-		<%= f.text_field :waiting_period %>
+		<%= f.label :waiting_period, 'How long did you have to wait to obtain an appointment?' %>
+		<%= f.select :waiting_period, [['Select', nil], [' 1 - 3 Weeks', 1], [' 1 - 3 Months', 2], [' 4 - 6 Months', 3], [' Over 7 Months', 4]]  %>
 	</div>
 
 </div>
