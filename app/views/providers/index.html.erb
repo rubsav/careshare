@@ -1,5 +1,7 @@
 <div id="providers">
-	<%= render @providers %>
+	<% @providers.each do |provider| %>
+	<%= render partial: 'provider', locals: {pro: provider} %>
+	<% end %>
 </div>
 
 

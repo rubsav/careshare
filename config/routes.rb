@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
   root 'providers#homepage'
 
-  resource :ratings
   
-  concern :reviews do 
-    resources :reviews
+  concern :reviewable do
+    resource :ratings
+    resources :reviews, only: [:show, :create, :destroy]
   end
-
-
-  resources :doctors, :controller => 'providers', :concerns => :reviews
-  resources :counsellors, :controller => 'providers', :concerns => :reviews
-  resources :organizations, :controller => 'providers', :concerns => :reviews
+  resources :doctors, :controller => 'providers', :concerns => :reviewable
+  resources :counsellors, :controller => 'providers', :concerns => :reviewable
+  resources :organizations, :controller => 'providers', :concerns => :reviewable
 
   resources :providers do
     resources :reviews, only: [:show, :create, :destroy]
