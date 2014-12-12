@@ -2,7 +2,9 @@
 
 <div>
 	<ul>
-		<li><%= link_to 'Add D.O.C', new_provider_path %></li>
+		<li><%= link_to 'Add a Doctor', new_provider_path(type: "Doctor") %></li>
+		<li><%= link_to 'Add a Counsellor', new_provider_path(type: "Cousellor") %></li>
+		<li><%= link_to 'Add a Organization', new_provider_path(type: "Organization") %></li>
 	</ul>
 	<ul>
 		<li><%= link_to "View All D.O.C's", providers_path %></li>

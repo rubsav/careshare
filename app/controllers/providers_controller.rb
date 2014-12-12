@@ -11,6 +11,7 @@ class ProvidersController < ApplicationController
   
   def new
     @provider = Provider.new
+    @type = params[:type]
   end
   
   def create

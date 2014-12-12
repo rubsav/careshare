@@ -6,13 +6,12 @@ Rails.application.routes.draw do
     resource :ratings
     resources :reviews, only: [:show, :create, :destroy]
   end
+  
+  resources :providers
   resources :doctors, :controller => 'providers', :concerns => :reviewable
   resources :counsellors, :controller => 'providers', :concerns => :reviewable
   resources :organizations, :controller => 'providers', :concerns => :reviewable
 
-  resources :providers do
-    resources :reviews, only: [:show, :create, :destroy]
-  end
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

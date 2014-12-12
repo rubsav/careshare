@@ -1,7 +1,3 @@
-
-<h1>Add a <%= @type.capitalize %></h1>
-<br>
-
 <%= form_for @provider do |f| %>
 	<% if @provider.errors.any? %>
 		<div id="error_explaination">
@@ -14,24 +10,18 @@
 		</div>
 	<% end %>
 	<div class="main-form">
-		<%= f.hidden_field :type, value: @type %>
-
-		<% unless @type.capitalize == "Organization" %>
-			<div>
-				<%= f.label :first_name %>
-				<%= f.text_field :first_name %>
-			</div>
-			<div>
-				<%= f.label :last_name %>
-				<%= f.text_field :last_name %>
-			</div>
-		<% else %>
-			<div>
-				<%= f.label :organization %>
-				<%= f.text_field :organization %>
-			</div>
-		<% end %>
-
+		<div>
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+		</div>
+		<div>
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+		</div>
+		<div>
+			<%= f.label :type %>
+			<%= f.select :type, [['Select Type of Provider', nil], ['Doctor', "Doctor" ], ['Counsellor', "Counsellor"], ['Organization', "Organization"]] %>
+		</div>
 		<div>
 			<%= f.label :address_line1 %>
 			<%= f.text_field :address_line1 %>
@@ -66,5 +56,3 @@
 	</div>
 <%= f.submit %>
 <%end%>
-
-

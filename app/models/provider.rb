@@ -1,16 +1,24 @@
 class Provider < ActiveRecord::Base
-	validates :first_name, :last_name, :full_address, :address_line1, :city, :province, :area_code, :phone_number, :type, :waiting_period,  presence: true
+	validate :first_name, unless: :is_organization?
+	validate :last_name, unless: :is_organization?
+	validates :full_address, :address_line1, :city, :province, :area_code, :phone_number, :type, :waiting_period,  presence: true
 
 	has_many :reviews
 	has_many :users, through: :reviews
+
+	before_save :capitalize_type
 
 	def full_address
 		full_address = "#{address_line1} #{address_line2} #{city} #{province} #{area_code}"	
 	end
 
-	def self
-      %w(Doctor Counsellor Organization)
-    end
+	def is_organization?
+		type == "Organization"
+	end
+
+	def capitalize_type
+		type.capitalize!
+	end
 
 end
 
