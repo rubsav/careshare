@@ -7,6 +7,9 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @provider.reviews.build(review_params)
+    if current_user
+      @review.user = current_user
+    end
     if @review.save
       redirect_to @provider, notice: 'Review created succesfully'
     else
@@ -25,7 +28,7 @@ class ReviewsController < ApplicationController
   private
   
   def review_params
-    params.require(:review).permit(:comment, :provider_id)
+    params.require(:review).permit(:comment, :provider_id, :name, :email)
   end
 
   def load_provider

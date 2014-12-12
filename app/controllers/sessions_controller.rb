@@ -1,6 +1,13 @@
 class SessionsController < ApplicationController
-  def new
-  end
+   # def new
+  #   user = User.new
+  #     if(user.save)
+  #       session[:user_id] = user.id
+  #        # Send them somewhere useful
+  #     else
+  #        # Handle the error
+  #     end
+  # end
 
   def create
   	user = User.find_by(email: params[:email])
