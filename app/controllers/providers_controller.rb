@@ -18,10 +18,11 @@ class ProvidersController < ApplicationController
       if @provider.save
         redirect_to @provider, notice: "D.O.C Successfully Added!"
       else
+        flash[:message] = "Something did not validate"
         render 'new'
     end
   end
-
+  
   def edit
   end
 
@@ -30,7 +31,7 @@ class ProvidersController < ApplicationController
 
 private
   def provider_params
-    params.require(:provider).permit(:first_name, :last_name, :full_address, :address_line1, :address_line2, :city, :province, :area_code, :phone_number,)
+    params.require(:provider).permit(:first_name, :last_name, :full_address, :address_line1, :address_line2, :city, :province, :area_code, :phone_number, :type, :waiting_period)
   end
 
 end
