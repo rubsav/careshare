@@ -36,6 +36,7 @@ group :development do
   gem "pry-rails"
   gem "quiet_assets"
   gem "awesome_print"
+  gem "faker"
 end
 
 # Use ActiveModel has_secure_password
