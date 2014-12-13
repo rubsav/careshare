@@ -28,10 +28,11 @@ class ReviewsController < ApplicationController
   private
   
   def review_params
-    params.require(:review).permit(:comment, :provider_id, :name, :email)
+    params.require(:review).permit(:comment, :provider_id, :name, :email, :type)
   end
 
   def load_provider
-    @provider = Provider.find(params[:provider_id])
+    provider = params[:doctor_id] || params[:counsellor_id] || params[:organization_id]
+    @provider = Provider.find(provider)
   end
 end
