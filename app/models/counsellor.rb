@@ -1,0 +1,2 @@
+class Counsellor < Provider
+end
