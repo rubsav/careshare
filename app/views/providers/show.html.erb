@@ -1,4 +1,3 @@
-
 <div class="provider-info">
 	<p><%= @provider.first_name %> <%= @provider.last_name %></p>
 	<p><%= @provider.full_address %></p>
@@ -6,6 +5,8 @@
 	<p><%= @provider.phone_number %></p>
 	<p><%= @provider.waiting_period %></p>
 </div>
+
+<div><%= link_to "Add a Rating", root_path %></div>
 
 
   <h3>Reviews for <%= @provider.first_name %></h3>
