@@ -6,12 +6,14 @@ class RatingsController < ApplicationController
   end
 
   def create
-    @rating = Rating.new(rating_params) 
-    @rating.user_id = current_user.id
+    @rating = Rating.new(rating_params)
+
+    if current_user
+      @rating.user_id = current_user.id
+    end
+    
     @rating.provider_id = @provider.id
-    # if current_user
-    #   @rating.user = current_user
-    # end
+    
     if @rating.save
       redirect_to @provider, notice: 'You have successfully added a rating!'
     else
