@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   root 'providers#homepage'
-
-  
+ 
   concern :reviewable do
-    resource :ratings
+    resource :ratings, only: [:show, :create, :destroy]
     resources :reviews, only: [:show, :create, :destroy]
   end
   
@@ -12,10 +11,12 @@ Rails.application.routes.draw do
   resources :counsellors, :controller => 'providers', :concerns => :reviewable
   resources :organizations, :controller => 'providers', :concerns => :reviewable
 
-
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
+  # resources :doctors, controller: 'providers', type: 'Doctor',  :concerns => :reviewable 
+  # resources :councellors, controller: 'providers', type: 'Councellor',  :concerns => :reviewable
+  # resources :organizations, controller: 'providers', type: 'Organization',  :concerns => :reviewable
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
