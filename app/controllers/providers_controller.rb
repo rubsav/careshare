@@ -1,4 +1,5 @@
 class ProvidersController < ApplicationController
+ 
 
   def index
     @providers = Provider.all
@@ -7,10 +8,12 @@ class ProvidersController < ApplicationController
   def show
     @provider = Provider.find(params[:id])
     @review = @provider.reviews.build
+    @rating = Rating.where(provider_id: @provider.id).order("created_at DESC")
   end
   
   def new
     @provider = Provider.new
+    @type = params[:type]
   end
   
   def create
@@ -31,7 +34,25 @@ class ProvidersController < ApplicationController
 
 private
   def provider_params
-    params.require(:provider).permit(:first_name, :last_name, :full_address, :address_line1, :address_line2, :city, :province, :area_code, :phone_number, :type, :waiting_period, :image)
+
+    params.require(:provider)
+          .permit(:first_name, 
+                  :last_name, 
+                  :full_address, 
+                  :address_line1, 
+                  :address_line2, 
+                  :city, 
+                  :province, 
+                  :area_code, 
+                  :phone_number, 
+                  :type, 
+                  :waiting_period,
+                  :organization_name,
+                  :type,
+                  :image
+                )
   end
+
+  
 
 end

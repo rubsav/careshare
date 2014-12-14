@@ -1,5 +1,5 @@
 
-<h1>Add a D.O.C</h1>
+<h1>Add a <%= @type.capitalize %></h1>
 <br>
 
 <%= form_for @provider do |f| %>
@@ -14,18 +14,23 @@
 		</div>
 	<% end %>
 	<div class="main-form">
+		<%= f.hidden_field :type, value: @type %>
 		<div>
-			<%= f.label :first_name %>
-			<%= f.text_field :first_name %>
+			<%= f.label :organization_name %>
+			<%= f.text_field :organization_name %>
 		</div>
-		<div>
-			<%= f.label :last_name %>
-			<%= f.text_field :last_name %>
-		</div>
-		<div>
-			<%= f.label :type %>
-			<%= f.select :type, [['Select Type of Provider', nil], ['Doctor', "Doctor" ], ['Counsellor', "Counsellor"], ['Organization', "Organization"]] %>
-		</div>
+
+		<% unless @type.capitalize == "Organization" %>
+			<div>
+				<%= f.label :first_name %>
+				<%= f.text_field :first_name %>
+			</div>
+			<div>
+				<%= f.label :last_name %>
+				<%= f.text_field :last_name %>
+			</div>
+		<% end %>
+
 		<div>
 			<%= f.label :address_line1 %>
 			<%= f.text_field :address_line1 %>
