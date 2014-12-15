@@ -9,6 +9,8 @@ class ReviewsController < ApplicationController
     @review = @provider.reviews.build(review_params)
     if current_user
       @review.user = current_user
+      @review.name = current_user.first_name
+      @review.email = current_user.email
     end
     if @review.save
       redirect_to @provider, notice: 'Review created succesfully'
@@ -18,11 +20,13 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @review = Review.find(params[:id])
   end
 
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
+    redirect_to user_path(current_user)
   end
 
   private
@@ -32,7 +36,7 @@ class ReviewsController < ApplicationController
   end
 
   def load_provider
-    provider = params[:doctor_id] || params[:counsellor_id] || params[:organization_id]
+    provider = params[:doctor_id] || params[:counsellor_id] || params[:organization_id] || params[:provider_id]
     @provider = Provider.find(provider)
   end
 end
