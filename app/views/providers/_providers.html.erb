@@ -1,0 +1,7 @@
+<% @providers.each do |provider| %>
+			<%= link_to provider_path(provider.id) do %>
+				<h3>
+					<%= provider.organization_name %> | <%= provider.first_name %> <%= provider.last_name  %>
+				</h3>
+			<% end %>
+		<% end %>
