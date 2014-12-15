@@ -12,7 +12,7 @@
 		your review is:
 		<%=review.comment %>
 		<%= link_to 'Edit Review', edit_provider_review_path(review.provider, review) %>
-		<%= link_to 'Delete Review', provider_review_path(review.provider, review), confirm: 'Are you sure?', method: :delete %>
+		<%= link_to 'Delete Review', provider_review_path(review.provider, review), method: :delete, data: {confirm: "Are you sure?"}  %>
 
 	</li>
 	<% end %>
