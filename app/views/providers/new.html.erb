@@ -2,7 +2,7 @@
 <h1>Add a <%= @type.capitalize %></h1>
 <br>
 
-<%= form_for @provider do |f| %>
+<%= form_for @provider, html: {multipart: true}  do |f| %>
 	<% if @provider.errors.any? %>
 		<div id="error_explaination">
 			<h2><%= pluralize(@provider.errors.count, "error") %> prohibited this form from being submitted</h2>
