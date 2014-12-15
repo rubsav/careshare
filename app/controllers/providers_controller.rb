@@ -2,7 +2,16 @@ class ProvidersController < ApplicationController
  
 
   def index
-    @providers = Provider.all
+    @providers =  if params[:search]
+      Provider.where("LOWER(first_name) LIKE LOWER(?)", "%#{params[:search]}%")
+    else 
+      Provider.all
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show
