@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    rescue ActiveRecord::RecordNotFound
   end
 
   helper_method :current_user
@@ -20,6 +21,10 @@ class ApplicationController < ActionController::Base
       flash[:alert] = "Please log in"
       redirect_to new_session_path
     end
+  end
+
+  def require_user
+  redirect_to root_path unless current_user
   end
   
 end

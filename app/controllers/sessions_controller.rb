@@ -1,13 +1,5 @@
 class SessionsController < ApplicationController
-   # def new
-  #   user = User.new
-  #     if(user.save)
-  #       session[:user_id] = user.id
-  #        # Send them somewhere useful
-  #     else
-  #        # Handle the error
-  #     end
-  # end
+  skip_before_filter :require_login
 
   def create
   	user = User.find_by(email: params[:email])
