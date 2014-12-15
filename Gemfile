@@ -30,7 +30,8 @@ gem 'bcrypt-ruby', '~> 3.1.0'
 gem 'cancancan', '~> 1.9'
 
 gem 'carrierwave'
-gem 'mini_magick'
+# gem 'mini_magick'
+gem 'rmagick'
 
 group :development do
   gem "better_errors"
