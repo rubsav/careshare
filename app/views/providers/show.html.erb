@@ -16,36 +16,17 @@
 
 
 
+<h3>Reviews for <%= @provider.first_name %></h3>
 
-  <h3>Reviews for <%= @provider.first_name %></h3>
+  <div id="review-list">
+    <%= render @provider.reviews %>
+  </div>
 
-  <% @provider.reviews[0..-2].each do |review| %>
-    <p>
-      <%= review.comment %>
-      <br>
-      <% if review.user != nil %>
-        <em> by <%= review.user.username %></em>
-        Added on: <%= review.created_at %>
-      <% else %>
-        <em> by <%= review.name %> </em>
-        Added on: <%= review.created_at %>
-      <% end %>
-    </p>
-  <% end %>
-
-  <h4>New Review</h4>
+<h3>New Review</h3>
 
   <%= form_for([@provider, @review]) do |f| %>
     <% if @review.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
-
-        <ul>
-        <% @review.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+      <%= render partial: 'reviews/review_errors' %>
     <% end %>
   
   <% unless current_user %>
@@ -67,11 +48,3 @@
       <%= f.submit %>
     </div>
   <% end %>
-
-
-<div>
-	<ul>
-		<li><%= link_to 'All Providers', providers_path %></li>
-	</ul>
-</div>
-
