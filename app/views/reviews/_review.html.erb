@@ -1,0 +1,19 @@
+<% if review.id.present? %>
+  <div class= 'review'>
+
+    <p class="comment">
+      <%= review.comment %>
+    </p>
+
+    <div class="poster">
+      <% if review.user != nil %>
+        <em> Posted by <%= review.user.username %> Added on: <%= review.created_at %></em>
+      <% else %>
+        <em> Posted by <%= review.name %> Added on: <%= review.created_at %> </em>
+      <% end %>
+    </div>
+    
+    <br>
+
+  </div>
+<% end %>

@@ -11,22 +11,11 @@
 
 <div><%= link_to "Add a Rating", root_path %></div>
 
+<h3>Reviews for <%= @provider.first_name %></h3>
 
-  <h3>Reviews for <%= @provider.first_name %></h3>
-
-  <% @provider.reviews[0..-2].each do |review| %>
-    <p>
-      <%= review.comment %>
-      <br>
-      <% if review.user != nil %>
-        <em> by <%= review.user.username %></em>
-        Added on: <%= review.created_at %>
-      <% else %>
-        <em> by <%= review.name %> </em>
-        Added on: <%= review.created_at %>
-      <% end %>
-    </p>
-  <% end %>
+  <div id="review-list">
+    <%= render @provider.reviews %>
+  </div>
 
   <h4>New Review</h4>
 
