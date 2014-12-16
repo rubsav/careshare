@@ -1,9 +1,9 @@
 <% if review.id.present? %>
   <div class= 'review'>
 
-    <p class="comment">
-      <%= review.comment %>
-    </p>
+    <div class="comment">
+      <p><%= review.comment %></p>
+    </div>
 
     <div class="poster">
       <% if review.user != nil %>
