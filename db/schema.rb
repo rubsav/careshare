@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141214144912) do
+ActiveRecord::Schema.define(version: 20141216033406) do
 
   create_table "providers", force: true do |t|
     t.string   "first_name"
@@ -35,9 +35,13 @@ ActiveRecord::Schema.define(version: 20141214144912) do
   create_table "ratings", force: true do |t|
     t.integer  "user_id"
     t.integer  "provider_id"
-    t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "knowledge_rating"
+    t.integer  "support_rating"
+    t.integer  "comfort_rating"
+    t.integer  "accessibility_rating"
+    t.integer  "recommendation_rating"
   end
 
   create_table "reviews", force: true do |t|
