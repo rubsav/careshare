@@ -2,10 +2,16 @@ class ProvidersController < ApplicationController
  
 
   def index
-    @providers =  if params[:search]
-      Provider.where("LOWER(first_name) LIKE LOWER(?)", "%#{params[:search]}%")
-    else 
-      Provider.all
+    @query = params[:search]
+
+    if @query
+      @providers = []
+      %w[first_name last_name organization_name].each do |field|
+        @providers += Provider.where("LOWER(#{field}) LIKE LOWER(?)", "%#{params[:search]}%") 
+      end
+      # @providers.sort_by { |provider| provider.organization_name}
+    else
+      @providers = Provider.all 
     end
 
     respond_to do |format|
