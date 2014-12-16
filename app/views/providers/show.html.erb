@@ -9,7 +9,12 @@
 	<p><%= @provider.waiting_period %></p>
 </div>
 
-<div><%= link_to "Add a Rating", root_path %></div>
+
+
+<div><%= link_to "Add a Rating", new_provider_rating_path(@provider.id) %></div>
+
+
+
 
 
   <h3>Reviews for <%= @provider.first_name %></h3>
