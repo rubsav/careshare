@@ -85,6 +85,32 @@ p, ul, ol, li {
 	font-weight: 300;
 }
 
+.share-provider {
+	display: inline-block;
+	background-color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 2px solid #000000;
+	width: 12em;
+	height: 3em;
+
+	margin-bottom: 2em;
+	margin-right: 1em;
+
+
+	}
+
+.share-provider:hover {
+	background-color: #ebebeb;
+}
+
+.share-provider:active {
+	background-color: #fdfdfd;
+}
+
 /*.share-provider {
 	-moz-box-shadow:inset 0px 39px 12px -10px #B3E2E3;
 	-webkit-box-shadow:inset 0px 39px 12px -10px #B3E2E3;
