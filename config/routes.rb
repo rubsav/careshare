@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'providers#homepage'
  
   concern :reviewable do
-    resources :ratings, only: [:show, :create, :destroy]
+    resources :ratings, only: [:new, :create, :destroy]
     resources :reviews, only: [:show, :edit, :update, :create, :destroy]
   end
     
