@@ -1,1 +1,1 @@
-$('#providers').html("<%= j(render @providers) %>");
+$('#providers').html("<%= j(render partial: "/providers/providers", locals: {providers: @providers}) %>");
