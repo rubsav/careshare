@@ -27,11 +27,9 @@ class RatingsController < ApplicationController
 
 
    @rating = @provider.ratings.build(rating_params)
-    # if current_user
-    #   @rating.user = current_user
-    #   @rating.name = current_user.first_name
-    #   @rating.email = current_user.email
-    # end
+    if current_user
+      @rating.user = current_user
+    end
 
     if @rating.save
       redirect_to @provider, notice: 'Rating created succesfully'
