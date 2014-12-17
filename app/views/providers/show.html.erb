@@ -13,13 +13,13 @@
 
 
 <h3>Reviews for <%= @provider.first_name %></h3>
-<div id="review-list">
-  <%= render @provider.reviews %>
-</div>
+  <div id="review-list">
+    <%= render @provider.reviews %>
+  </div>
 
   <h3>New Review</h3>
-
   <%= form_for([@provider, @review],:remote => true) do |f| %>
+    
     <div id='review-errors'>
       <% if @review.errors.any? %>
         <%= render partial: 'reviews/review_errors' %>
