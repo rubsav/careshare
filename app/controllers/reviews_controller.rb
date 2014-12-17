@@ -12,10 +12,14 @@ class ReviewsController < ApplicationController
       @review.name = current_user.first_name
       @review.email = current_user.email
     end
-    if @review.save
-      redirect_to @provider, notice: 'Review created succesfully'
-    else
-      render 'providers/show'
+    respond_to do |format|
+      if @review.save
+        format.html {redirect_to provider_path(@provider.id), notice: 'Review added successfully.' }
+        format.js {} # This will look for app/views/reviews/create.js.erb
+      else
+        format.html {render 'providers/show', alert: 'There was an error.' }
+        format.js {} # This will look for app/views/reviews/create.js.erb
+      end
     end
   end
 
