@@ -9,26 +9,22 @@
 	<p><%= @provider.waiting_period %></p>
 </div>
 
-
-
 <div><%= link_to "Add a Rating", new_provider_rating_path(@provider.id) %></div>
 
 
-
-
 <h3>Reviews for <%= @provider.first_name %></h3>
+<div id="review-list">
+  <%= render @provider.reviews %>
+</div>
 
-  <div id="review-list">
-    <%= render @provider.reviews %>
-  </div>
+  <h3>New Review</h3>
 
-<h3>New Review</h3>
-
-  <%= form_for([@provider, @review]) do |f| %>
-    <% if @review.errors.any? %>
-      <%= render partial: 'reviews/review_errors' %>
-    <% end %>
-  
+  <%= form_for([@provider, @review],:remote => true) do |f| %>
+    <div id='review-errors'>
+      <% if @review.errors.any? %>
+        <%= render partial: 'reviews/review_errors' %>
+      <% end %>
+    </div>
   <% unless current_user %>
     <div class="field">
       <%= f.label :name %><br />
@@ -38,7 +34,7 @@
       <%= f.label :email %><br />
       <%= f.text_field :email %>
     </div>
-  <%end%>
+  <% end %>
 
     <div class="field">
       <%= f.label :comment %><br />
@@ -48,3 +44,5 @@
       <%= f.submit %>
     </div>
   <% end %>
+
+
