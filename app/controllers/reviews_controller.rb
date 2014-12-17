@@ -1,8 +1,9 @@
 class ReviewsController < ApplicationController
   before_filter :load_provider
+  before_filter :load_review, only:[:show, :edit, :update, :destroy]
   
   def show
-    @review = Review.find(params[:id])
+    
   end
 
   def create
@@ -24,11 +25,10 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @review = Review.find(params[:id])
+    
   end
 
   def update
-    @review = Review.find(params[:id])
       if @review.update_attributes(review_params)
         redirect_to user_path(current_user)
       else
@@ -37,7 +37,6 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:id])
     @review.destroy
     redirect_to user_path(current_user)
   end
@@ -51,5 +50,9 @@ class ReviewsController < ApplicationController
   def load_provider
     provider = params[:doctor_id] || params[:counsellor_id] || params[:organization_id] || params[:provider_id]
     @provider = Provider.find(provider)
+  end
+
+  def load_review
+    @review = Review.find(params[:id])
   end
 end
