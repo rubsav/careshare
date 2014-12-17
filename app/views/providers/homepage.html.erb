@@ -1,7 +1,15 @@
 <h1>Hey! This is the Homepage.</h1>
 <div>
-		<button class="share-provider"><%= link_to 'Add a Doctor', new_provider_path(type: "Doctor") %></button>
-		<button class="share-provider"><%= link_to 'Add a Counsellor', new_provider_path(type: "Counsellor") %></button>
-		<button class="share-provider"><%= link_to 'Add a Organization', new_provider_path(type: "Organization") %></button>
+	<button class="share-provider">
+		<%= link_to 'Add a Doctor', new_provider_path(type: "Doctor") %>
+	</button>
+	
+	<button class="share-provider">
+		<%= link_to 'Add a Counsellor', new_provider_path(type: "Counsellor") %>
+	</button>
+
+	<button class="share-provider">
+		<%= link_to 'Add a Organization', new_provider_path(type: "Organization") %>
+	</button>
 </div>
 
