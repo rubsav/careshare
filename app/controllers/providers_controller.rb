@@ -28,7 +28,7 @@ class ProvidersController < ApplicationController
   
   def new
     @provider = Provider.new
-    @type = params[:type]
+    @type = params[:type].capitalize
   end
   
   def create
