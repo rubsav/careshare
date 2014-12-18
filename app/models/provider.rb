@@ -5,8 +5,9 @@
 	
 
 	has_many :reviews
-	has_many :users, through: :reviews
 	has_many :ratings
+	has_many :users_that_reviewed_this, through: :reviews, source: :user
+	has_many :users_that_rated_this, through: :ratings, source: :user
 
 	before_save :capitalize_type
 
@@ -32,6 +33,16 @@
 
 	def capitalize_type
 		type.capitalize!
+	end
+
+	def ratings_by_user(user)
+		rating = ratings.find_by(user: user)
+		rating.average_rating_by_user
+	end
+
+
+	def overall_rating 
+		(self.ratings.sum("knowledge_rating + support_rating + comfort_rating + accessibility_rating + recommendation_rating ") / (20 * ratings.count(:user_id).to_f) * 100).round(0)
 	end
 
 end
