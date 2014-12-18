@@ -5,7 +5,7 @@
 <p> Email: <%= @user.email %></p>
 
 <h4> Your reviews </h4>
-<table>
+<div>
 	<% @user.reviews.each do |review| %>
 	<li>
 		For <%=link_to(review.provider.first_name, provider_path(review.provider))  %> 
@@ -16,7 +16,21 @@
 
 	</li>
 	<% end %>
-</table>
+</div>
+
+<h4>Your Ratings</h4>
+<div>
+	<% @user.ratings.each do |rating| %>
+	<li>
+		For <%=link_to(rating.provider.first_name, provider_path(rating.provider))  %> 
+		your rating is:
+		<%= link_to 'Edit rating', edit_provider_rating_path(rating.provider, rating) %>
+	</li>
+	<% end %>
+</div>
+
+
+
 
 <div>
 
