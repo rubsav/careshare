@@ -1,2 +1,137 @@
 <h1>Ratings#edit</h1>
 <p>Find me in app/views/ratings/edit.html.erb</p>
+
+<h1>Leave a rating for <%= @provider.first_name %>
+ <%= @provider.last_name %> <%= @provider.organization_name  %></h1>
+
+  <%= form_for([@provider, @rating]) do |f| %>
+    <% if @rating.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@rating.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+        <ul>
+        <% @rating.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+<div class="question-area">  
+  <h4 class="provider-rating-qs">Was your <%= (@provider.type).downcase %> knowledgable of trans healthcare?</h4>
+    <div class="field">
+      <%= f.radio_button :knowledge_rating, 4 %>
+      <%= f.label :knowledge_rating, "Strongly Agree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :knowledge_rating, 3 %>
+      <%= f.label :knowledge_rating, "Agree"  %>
+    </div>
+     <div class="field">
+      <%= f.radio_button :knowledge_rating, 2 %>
+      <%= f.label :knowledge_rating, "Neither Agree Nor Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :knowledge_rating, 1 %>
+      <%= f.label :rating, "Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :knowledge_rating, 0 %>
+      <%= f.label :knowledge_rating, "Strongly Disagree"  %>
+    </div>
+</div>
+
+<div class="question-area">  
+  <h4 class="provider-rating-qs" >How would you rate the help and support provided by staff?</h4>
+    <div class="field">
+      <%= f.radio_button :support_rating, 4 %>
+      <%= f.label :support_rating, "Strongly Agree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :support_rating, 3 %>
+      <%= f.label :support_rating, "Agree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :support_rating, 2 %>
+      <%= f.label :support_rating, "Neither Agree Nor Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :support_rating, 1 %>
+      <%= f.label :support_rating, "Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :support_rating, 0 %>
+      <%= f.label :support_rating, "Strongly Disagree"  %>
+    </div>
+
+<div class="question-area">  
+  <h4 class="provider-rating-qs" >Did you provider make you feel comfortable in discussing your healthcare concerns with your provider?</h4>
+    <div class="field">
+      <%= f.radio_button :comfort_rating, 4 %>
+      <%= f.label :comfort_rating, "Strongly Agree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :comfort_rating, 3 %>
+      <%= f.label :comfort_rating, "Agree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :comfort_rating, 2 %>
+      <%= f.label :comfort_rating, "Neither Agree Nor Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :comfort_rating, 1 %>
+      <%= f.label :comfort_rating, "Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :comfort_rating, 0 %>
+      <%= f.label :comfort_rating, "Strongly Disagree"  %>
+    </div>
+</div>
+
+<div class="question-area">  
+  <h4 class="provider-rating-qs">Was the space accessible? ie. non-binary washrooms, wheelchair accessible etc.</h4>
+     <div class="field">
+      <%= f.radio_button :accessibility_rating, 4 %>
+      <%= f.label :accessibility_rating, "Strongly Agree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :accessibility_rating, 3 %>
+      <%= f.label :accessibility_rating, "Agree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :accessibility_rating, 2 %>
+      <%= f.label :accessibility_rating, "Neither Agree Nor Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :accessibility_rating, 1 %>
+      <%= f.label :accessibility_rating, "Disagree"  %>
+    </div>
+    <div class="field">
+      <%= f.radio_button :accessibility_rating, 0 %>
+      <%= f.label :accessibility_rating, "Strongly Disagree"  %>
+    </div>
+</div>
+
+<div class="question-area">  
+    <h4 class="provider-rating-qs">Would you recommend this <%= (@provider.type).downcase %>?</h4>
+      <div class="field">
+      <%= f.radio_button :recommendation_rating, 4 %>
+      <%= f.label :recommendation_rating, "Yes"  %>
+      </div>
+      <div class="field">
+      <%= f.radio_button :recommendation_rating, 2 %>
+      <%= f.label :recommendation_rating, "Maybe"  %>
+      </div>
+      <div class="field">
+      <%= f.radio_button :recommendation_rating, 0 %>
+      <%= f.label :recommendation_rating, "No"  %>
+      </div>
+</div>
+
+<br>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<br>
+<div>
