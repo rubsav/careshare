@@ -1,8 +1,9 @@
 class ReviewsController < ApplicationController
   before_filter :load_provider
+  before_filter :load_review, only:[:show, :edit, :update, :destroy]
   
   def show
-    @review = Review.find(params[:id])
+    
   end
 
   def create
@@ -12,19 +13,22 @@ class ReviewsController < ApplicationController
       @review.name = current_user.first_name
       @review.email = current_user.email
     end
-    if @review.save
-      redirect_to @provider, notice: 'Review created succesfully'
-    else
-      render 'providers/show'
+    respond_to do |format|
+      if @review.save
+        format.html {redirect_to provider_path(@provider.id), notice: 'Review added successfully.' }
+        format.js {} # This will look for app/views/reviews/create.js.erb
+      else
+        format.html {render 'providers/show', alert: 'There was an error.' }
+        format.js {} # This will look for app/views/reviews/create.js.erb
+      end
     end
   end
 
   def edit
-    @review = Review.find(params[:id])
+    
   end
 
   def update
-    @review = Review.find(params[:id])
       if @review.update_attributes(review_params)
         redirect_to user_path(current_user)
       else
@@ -33,7 +37,6 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find(params[:id])
     @review.destroy
     redirect_to user_path(current_user)
   end
@@ -47,5 +50,9 @@ class ReviewsController < ApplicationController
   def load_provider
     provider = params[:doctor_id] || params[:counsellor_id] || params[:organization_id] || params[:provider_id]
     @provider = Provider.find(provider)
+  end
+
+  def load_review
+    @review = Review.find(params[:id])
   end
 end

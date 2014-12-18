@@ -11,18 +11,10 @@
 
 	before_save :capitalize_type
 
-	# delegate :doctors, :counsellors, :organizations, to: :providers
-	# scope :doctors, -> { where(type: 'Doctor') } 
-	# scope :counsellors, -> { where(type: 'Counsellor') } 
-	# scope :organizations, -> { where(type: 'Organization') }
-
-	# def self
- #      %w(Doctor Counsellor Organization)
- #    end
-
-
 	mount_uploader :image, ImageUploader
 
+	
+	
 	def full_address
 		full_address = "#{address_line1} #{address_line2} #{city} #{province} #{area_code}"	
 	end
