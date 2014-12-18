@@ -3,6 +3,7 @@
 	validate :last_name, unless: :is_organization?
 	validates :full_address, :address_line1, :city, :province, :area_code, :phone_number, :type, :waiting_period,  presence: true
 	
+	belongs_to :user
 
 	has_many :reviews
 	has_many :ratings

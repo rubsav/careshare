@@ -2,7 +2,10 @@ class User < ActiveRecord::Base
 	has_secure_password
 	has_many :reviews
 	has_many :ratings
-  	has_many :providers, through: :reviews, through: :ratings
+	has_many :providers
+  	has_many :providers_reviewed, through: :reviews, source: :providers
+  	has_many :providers_rated, through: :ratings, source: :providers
+
 
   	def full_name
   		"#{first_name} #{last_name}"
