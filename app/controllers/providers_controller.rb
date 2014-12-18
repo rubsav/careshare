@@ -33,18 +33,33 @@ class ProvidersController < ApplicationController
   
   def create
     @provider = Provider.new(provider_params)
-      if @provider.save
-        redirect_to @provider, notice: "D.O.C Successfully Added!"
-      else
-        flash[:message] = "Something did not validate"
-        render 'new'
+    @provider.user_id = current_user.id
+    if @provider.save
+      redirect_to @provider, notice: "D.O.C Successfully Added!"
+    else
+      flash[:message] = "Something did not validate"
+      render 'new'
     end
   end
   
   def edit
+    @provider = Provider.find(params[:id])
   end
 
-  def delete
+  def update
+    @provider = Provider.find(params[:id])
+    if @provider.update_attributes(provider_params)
+      redirect_to @provider
+    else
+      render :edit
+    end
+    
+  end
+
+  def destroy
+    @provider = Provider.find(params[:id])
+    @provider.destroy
+    redirect_to providers_path
   end
 
 private
