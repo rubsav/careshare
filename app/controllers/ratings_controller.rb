@@ -1,8 +1,10 @@
 class RatingsController < ApplicationController
   before_filter :load_provider
+  before_filter :ensure_logged_in
+  before_filter :load_rating, only:[:show, :destroy, :edit, :update]
  
   def show
-    @rating = Rating.find(params[:id])
+
   end
 
   def new
@@ -41,11 +43,19 @@ class RatingsController < ApplicationController
 
 
   def destroy
-    @rating = Rating.find(params[:id])
     @rating.destroy
   end
 
-  def edit
+   def edit
+    @rating = Rating.find(params[:id])
+  end
+
+  def update
+      if @rating.update_attributes(rating_params)
+        redirect_to @provider
+      else
+        render :edit
+    end
   end
 
   private
@@ -57,6 +67,10 @@ class RatingsController < ApplicationController
   def load_provider
     provider = params[:doctor_id] || params[:counsellor_id] || params[:organization_id] || params[:provider_id]
     @provider = Provider.find(provider)
+  end
+
+  def load_rating
+    @rating = Rating.find(params[:id])
   end
 
 end
