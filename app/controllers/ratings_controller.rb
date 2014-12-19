@@ -51,7 +51,7 @@ class RatingsController < ApplicationController
   end
 
   def update
-      if @rating.update_attributes(rating_params)
+      if @rating.update(rating_params)
         redirect_to @provider
       else
         render :edit
