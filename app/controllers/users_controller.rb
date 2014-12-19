@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :require_user
+  before_filter :require_user, except: [:new, :create]
   load_and_authorize_resource
 
   def show
@@ -13,7 +13,8 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
 	  	if @user.save
-	  		render 'sessions/new', notice: "Signed up!"
+	  		session[:user_id] = @user.id
+        redirect_to user_path(@user), notice: "Signed up!"
 	  	else
 	  		render 'new'
 	  end
