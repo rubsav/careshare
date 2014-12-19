@@ -10,62 +10,62 @@
 
   <div class="rating-info">
     <div class = "overall-rating">
-        Overall Rating: 
-        <% if @provider.ratings.present? %>
-          <%= @provider.overall_rating %>%
-        <% else %>
-        No Ratings Avaliable - be the first to leave a rating!
+      Overall Rating: 
+      <% if @provider.ratings.present? %>
+      <%= @provider.overall_rating %>%
+      <% else %>
+      No Ratings Avaliable - be the first to leave a rating!
       <% end %>
 
     </div>
 
     <div class = "rating-by-user">
       Your Rating: 
-        <% if present_or_rated?(@provider) %>
-          <%= @provider.ratings_by_user(current_user) %> 
-          <%= link_to "Edit Rating", edit_provider_rating_path(@provider, @rating) %> 
-        <% else %>
-          <%= link_to "Add a Rating", new_provider_rating_path(@provider) %>
+      <% if present_or_rated?(@provider) %>
+      <%= @provider.ratings_by_user(current_user) %> 
+      <%= link_to "Edit Rating", edit_provider_rating_path(@provider, @rating) %> 
+      <% else %>
+      <%= link_to "Add a Rating", new_provider_rating_path(@provider) %>
       <% end %> 
     </div>
-</div>
-
-</div>
-
-
-<h3 class="provider-reviews">Reviews for <%= @provider.first_name %> <%= @provider.last_name %></h3>
-
-  <div id="review-list">
-    <%= render @provider.reviews %>
   </div>
 
-  <h3 class="create-review">Create a New Review</h3>
-  <%= form_for([@provider, @review],:remote => true) do |f| %>
+</div>
+
+
+<h3 class="provider-reviews">Reviews for <%= @provider.first_name %> <%= @provider.last_name %> <%= @provider.organization_name %> </h3>
+
+<div id="review-list">
+  <%= render @provider.reviews %>
+</div>
+
+<h3 class="create-review">Create a New Review</h3>
+<%= form_for([@provider, @review],:remote => true) do |f| %>
 
 <div class="create_review-fields">
-    <div id='review-errors'>
-      <% if @review.errors.any? %>
-        <%= render partial: 'reviews/review_errors' %>
-      <% end %>
-    </div>
+  <div id='review-errors'>
+    <% if @review.errors.any? %>
+    <%= render partial: 'reviews/review_errors' %>
+    <% end %>
+  </div>
   <% unless current_user %>
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.text_field :email %>
-    </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
   <% end %>
 
-    <div class="field">
-      <%= f.label :comment %><br />
-      <%= f.text_area :comment %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
   <% end %>
 
 </div>    
