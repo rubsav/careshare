@@ -24,7 +24,7 @@ end
 
 puts "Creating Providers"
 puts "========================================================="
-50.times do
+150.times do
   	name = Faker::Name.name.split
 
   	type = ["Doctor", "Counsellor", "Organization"].sample
@@ -50,7 +50,7 @@ end
 
 puts "Creating Reviews"
 puts "========================================================="
-100.times do
+150.times do
 	reviewer_user = User.all.sample
 	r = Review.create!(
 		comment: Faker::Lorem.paragraph,
@@ -65,13 +65,17 @@ end
 
 puts "Creating Ratings"
 puts "========================================================="
-100.times do
+150.times do
 	r = Rating.create!(
 		user_id: User.all.sample.id,
 		provider_id: Provider.all.sample.id,
-		rating: [*1..5].sample
+		knowledge_rating: [*0..4].sample,
+		support_rating: [*0..4].sample,
+		comfort_rating: [*0..4].sample,
+		accessibility_rating: [*0..4].sample,
+		recommendation_rating: [*0..4].sample
 	)
-	puts "Made rating of #{r.rating} for #{r.provider.organization_name}"
+	puts "Made rating of #{r.knowledge_rating} for #{r.provider.organization_name}"
 end
 
 # binding.pry
