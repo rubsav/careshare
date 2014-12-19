@@ -1,5 +1,5 @@
 class ProvidersController < ApplicationController
- 
+  before_filter :ensure_logged_in, except: [:index, :show, :homepage,]
 
   def index
     @query = params[:search]
@@ -23,8 +23,9 @@ class ProvidersController < ApplicationController
   def show
     @provider = Provider.find(params[:id])
     @review = @provider.reviews.build
+    if current_user
     @rating = current_user.ratings.find_by(:provider => @provider)
-    # @rating = Rating.where(provider_id: @provider.id).order("created_at DESC").first
+    end
   end
   
   def new
