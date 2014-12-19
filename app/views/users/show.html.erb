@@ -1,28 +1,34 @@
 <h1>Hello! <%= @user.username %> Welcome to your profile!</h1>
+<div class="account-links">
+	<p class="p-account-links"><%= link_to "Update Account Information", edit_user_path(@user) %></p>
+	<p class="p-account-links"><%= link_to "Delete Account", @user, method: :delete, data: {confirm: "Are you sure you want to delete this user?"}  %></p>
+</div>
 
 <p> Name: <%= @user.first_name %></p>
 <p> Last Name: <%= @user.last_name %></p>
 <p> Email: <%= @user.email %></p>
 
-<h4> Your reviews </h4>
-<div>
+<h4 class= "account-heading"> Your reviews </h4>
+<div class= "user-reviews">
 	<% @user.reviews.each do |review| %>
-	<li>
-		For <%=link_to(review.provider.first_name, provider_path(review.provider))  %> 
+	<li class="user-review">
+		<p>For <%=link_to(review.provider.first_name, provider_path(review.provider))  %> 
 		your review is:
 		<%=review.comment %>
-		<%= link_to 'Edit Review', edit_provider_review_path(review.provider, review) %>
-		<%= link_to 'Delete Review', provider_review_path(review.provider, review), method: :delete, data: {confirm: "Are you sure?"}  %>
+		<p class="edit-review"><%= link_to 'Edit Review', edit_provider_review_path(review.provider, review) %></p>
+		<p class ="delete-review"><%= link_to 'Delete Review', provider_review_path(review.provider, review), method: :delete, data: {confirm: "Are you sure?"}  %></p>
+		</p>
+		
 
 	</li>
 	<% end %>
 </div>
 
-<h4>Your Ratings</h4>
+<h4 class= "account-heading">Your Ratings</h4>
 
-<div>
+<div class = "user-ratings">
 	<% @user.ratings.each do |rating| %>
-	<li>
+	<li class="user-rating">
 		For <%=link_to(rating.provider.first_name, provider_path(rating.provider))  %> 
 		your rating is:
 		<%= link_to 'Edit rating', edit_provider_rating_path(rating.provider, rating) %>
@@ -32,7 +38,7 @@
 </div>
 
 
-<h4> The D.O.C's you have added </h4>
+<h4 class= "account-heading"> The D.O.C's you have added </h4>
 
 <div>
 	<% @providers.each do |provider| %>
@@ -44,13 +50,6 @@
 	
 </div>
 
-
-<div>
-	<br>
-	
-	<%= link_to "Edit Profile", edit_user_path(@user) %> | 
-	<%= link_to "Delete Profile", @user, method: :delete, data: {confirm: "Are you sure you want to delete this user?"}  %>
-</div>
 
 
 

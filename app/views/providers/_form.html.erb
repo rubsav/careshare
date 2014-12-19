@@ -11,57 +11,57 @@
 	<% end %>
 	<div class="main-form">
 		<%= f.hidden_field :type, value: @type %>
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :organization_name %>
 			<%= f.text_field :organization_name %>
 		</div>
 
 		<% unless @type == "Organization" %>
-			<div>
+			<div class="new-provider-form">
 				<%= f.label :first_name %>
 				<%= f.text_field :first_name %>
 			</div>
-			<div>
+			<div class="new-provider-form">
 				<%= f.label :last_name %>
 				<%= f.text_field :last_name %>
 			</div>
 		<% end %>
 
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :address_line1 %>
 			<%= f.text_field :address_line1 %>
 		</div>
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :address_line2 %>
 			<%= f.text_field :address_line2 %>
 		</div>
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :city %>
 			<%= f.text_field :city %>
 		</div>
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :province %>
 			<%= f.text_field :province %>
 		</div>
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :area_code %>
 			<%= f.text_field :area_code %>
 		</div>
 
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :phone_number %>
 			<%= f.telephone_field :phone_number, :size => 10, :maxlength => 10  %> 
 			<!-- can you break up the tele field into multi sections? use JS -->
 		</div>
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :waiting_period, 'How long did you have to wait to obtain an appointment?' %>
 			<%= f.select :waiting_period, [['Select', nil], [' Less than 1 Month', 0], [' 1 Month', 1], ['2 Months', 2], ['3 Months', 3], ['4 Months', 4], ['5 Months', 5], ['6 Months', 6], ['7 Months', 7], ['8 Months', 8], ['9 Months', 9], ['10 Months', 10], ['11 Months', 11], ['12 Months', 12], ['Over 12 Months', 13]] %>
 		</div>
-		<div>
+		<div class="new-provider-form">
 			<%= f.label :image  %>
 			<%= f.file_field :image  %>
 		</div>
 
-	</div>
 <%= f.submit %>
 <%end%>
+</div>

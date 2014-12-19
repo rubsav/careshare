@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141216033406) do
+ActiveRecord::Schema.define(version: 20141218205246) do
 
   create_table "providers", force: true do |t|
     t.string   "first_name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20141216033406) do
     t.string   "province"
     t.string   "area_code",         limit: 6
     t.string   "image"
+    t.integer  "user_id"
   end
 
   create_table "ratings", force: true do |t|

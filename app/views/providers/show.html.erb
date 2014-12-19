@@ -1,39 +1,48 @@
 <div class="provider-info">
   <%= image_tag @provider.image_url(:avatar)  %>
-	<p class="provider-detail"><%= @provider.first_name %> <%= @provider.last_name %></p>
-	<p class="provider-detail"><%= @provider.full_address %></p>
-	<p class="provider-detail"><%= @provider.type %></p>
-	<p class="provider-detail"><%= @provider.phone_number %></p>
-	<p class="provider-detail"><%= @provider.waiting_period %></p>
+  <div class="provider-details">
+  	<p class="provider-detail-name"><%= @provider.first_name %> <%= @provider.last_name %></p>
+  	<p class="provider-detail">Address: <%= @provider.full_address %></p>
+  	<p class="provider-detail">Type: <%= @provider.type %></p>
+  	<p class="provider-detail">Phone Number: <%= @provider.phone_number %></p>
+  	<p class="provider-detail">Average Waiting Period: <%= @provider.waiting_period %> Months</p>
+  </div>
+
+  <div class="rating-info">
+    <div class = "overall-rating">
+        Overall Rating: 
+        <% if @provider.ratings.present? %>
+          <%= @provider.overall_rating %>%
+        <% else %>
+        No Ratings Avaliable - be the first to leave a rating!
+      <% end %>
+
+    </div>
+
+    <div class = "rating-by-user">
+      Your Rating: 
+        <% if present_or_rated?(@provider) %>
+          <%= @provider.ratings_by_user(current_user) %> 
+          <%= link_to "Edit Rating", edit_provider_rating_path(@provider, @rating) %> 
+        <% else %>
+          <%= link_to "Add a Rating", new_provider_rating_path(@provider) %>
+      <% end %> 
+    </div>
 </div>
 
-<div class = "display-ratings">
-    Overall Rating: 
-    <% if @provider.ratings.present? %>
-      <%= @provider.overall_rating %>%
-    <% else %>
-    No Ratings Avaliable - be the first to leave a rating!
-  <% end %>
 </div>
 
-<div class = "rating-by-user">
-  Your Rating: 
-    <% if present_or_rated?(@provider) %>
-      <%= @provider.ratings_by_user(current_user) %> 
-      <%= link_to "Edit Rating", edit_provider_rating_path(@provider, @rating) %> 
-    <% else %>
-      <%= link_to "Add a Rating", new_provider_rating_path(@provider) %>
-  <% end %> 
-</div>
 
-<h3>Reviews for <%= @provider.first_name %></h3>
+<h3 class="provider-reviews">Reviews for <%= @provider.first_name %> <%= @provider.last_name %></h3>
+
   <div id="review-list">
     <%= render @provider.reviews %>
   </div>
 
-  <h3>New Review</h3>
+  <h3 class="create-review">Create a New Review</h3>
   <%= form_for([@provider, @review],:remote => true) do |f| %>
-    
+
+<div class="create_review-fields">
     <div id='review-errors'>
       <% if @review.errors.any? %>
         <%= render partial: 'reviews/review_errors' %>
@@ -58,5 +67,7 @@
       <%= f.submit %>
     </div>
   <% end %>
+
+</div>    
 
 
