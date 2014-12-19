@@ -23,7 +23,8 @@ class ProvidersController < ApplicationController
   def show
     @provider = Provider.find(params[:id])
     @review = @provider.reviews.build
-    @rating = Rating.where(provider_id: @provider.id).order("created_at DESC").last
+    @rating = current_user.ratings.find_by(:provider => @provider)
+    # @rating = Rating.where(provider_id: @provider.id).order("created_at DESC").first
   end
   
   def new
