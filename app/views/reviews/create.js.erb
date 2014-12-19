@@ -2,6 +2,8 @@
 	$("#review-errors").html("<%= j(render partial:'review_errors') %>");
 <% else %>
 	$('#review-list').html("<%= j(render @provider.reviews) %>");
+	$('#review_name').val('');
+	$('#review_email').val('');
 	$('#review_comment').val('');
 	$('#review-errors').html('');
 <% end %> 
