@@ -1,8 +1,10 @@
 <body>
-	<%= form_tag providers_path, method: :get, authentication: false, id: 'search-form' do %>
-		<%= text_field_tag :search, params[:search]  %>
-		<%= submit_tag "Find a Provider"  %>
-	<% end %>
+	<div class="search-bar">
+		<%= form_tag providers_path, method: :get, authentication: false, id: 'search-form' do %>
+			<%= text_field_tag :search, params[:search]  %>
+			<div class="search-bar-label">Find a Provider</div>
+		<% end %>
+	</div>
 
 
 	<div id="providers">

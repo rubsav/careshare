@@ -1,10 +1,10 @@
 <div class="provider-info">
-  <p><%= image_tag @provider.image_url(:avatar)  %></p>
-	<p><%= @provider.first_name %> <%= @provider.last_name %></p>
-	<p><%= @provider.full_address %></p>
-	<p><%= @provider.type %></p>
-	<p><%= @provider.phone_number %></p>
-	<p><%= @provider.waiting_period %></p>
+  <%= image_tag @provider.image_url(:avatar)  %>
+	<p class="provider-detail"><%= @provider.first_name %> <%= @provider.last_name %></p>
+	<p class="provider-detail"><%= @provider.full_address %></p>
+	<p class="provider-detail"><%= @provider.type %></p>
+	<p class="provider-detail"><%= @provider.phone_number %></p>
+	<p class="provider-detail"><%= @provider.waiting_period %></p>
 </div>
 
 <div class = "display-ratings">
