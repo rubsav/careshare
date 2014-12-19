@@ -33,6 +33,8 @@ gem 'carrierwave'
 # gem 'mini_magick'
 gem 'rmagick'
 
+gem 'honeypot-captcha'
+
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
