@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   before_filter :require_user, except: [:new, :create]
+  before_filter :load_user, only:[:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
   def show
-  	@user = User.find(params[:id])
+    @providers = current_user.providers
   end
 
   def new
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
   def create
   	@user = User.new(user_params)
 	  	if @user.save
-        sessions [:user_id] = @user.id
+        session[:user_id] = @user.id
 	  		redirect_to user_path(@user), notice: "Signed up!"
 	  	else
 	  		render 'new'
@@ -21,11 +22,10 @@ class UsersController < ApplicationController
 	end
 
   def edit
-  	@user = User.find(params[:id])
+  	
   end
 
   def update
-  	@user = User.find(params[:id])
   		if @user.update_attributes(user_params)
   			redirect_to @user
   		else
@@ -33,8 +33,7 @@ class UsersController < ApplicationController
 		end
   end
 
-  	def destroy
-		@user = User.find(params[:id])
+  def destroy
 		@user.destroy
 		redirect_to root_path, notice: "User account deleted!"
 	end
@@ -43,6 +42,10 @@ class UsersController < ApplicationController
   private
   def user_params
   	params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :password_confirmation)
+  end
+
+  def load_user
+    @user = User.find(params[:id])
   end
   
 end
