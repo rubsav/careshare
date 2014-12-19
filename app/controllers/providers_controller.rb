@@ -29,29 +29,45 @@ class ProvidersController < ApplicationController
   
   def new
     @provider = Provider.new
-    @type = params[:type].capitalize
+    @type = @type || params[:type].capitalize
   end
   
   def create
     @provider = Provider.new(provider_params)
-      if @provider.save
-        redirect_to @provider, notice: "D.O.C Successfully Added!"
-      else
-        flash[:message] = "Something did not validate"
-        render 'new'
+    @provider.user_id = current_user.id
+    if @provider.save
+      redirect_to @provider, notice: "D.O.C Successfully Added!"
+    else
+      @type = provider_params[:type]
+      flash[:message] = "Something did not validate"
+      render 'new'
     end
   end
   
   def edit
+    @provider = Provider.find(params[:id])
   end
 
-  def delete
+  def update
+    @provider = Provider.find(params[:id])
+    if @provider.update_attributes(provider_params)
+      redirect_to @provider
+    else
+      render :edit
+    end
+    
+  end
+
+  def destroy
+    @provider = Provider.find(params[:id])
+    @provider.destroy
+    redirect_to user_path(current_user)
   end
 
 private
   def provider_params
-
-    params.require(:provider)
+    # required_param = params[:organization] || params[:doctor] || params[:counsellor] || params[:provider]
+    params.require(params.keys[2].to_sym) # => :provider
           .permit(:first_name, 
                   :last_name, 
                   :full_address, 
@@ -64,7 +80,6 @@ private
                   :type, 
                   :waiting_period,
                   :organization_name,
-                  :type,
                   :image
                 )
   end
