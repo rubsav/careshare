@@ -19,12 +19,13 @@ class ApplicationController < ActionController::Base
   def ensure_logged_in
     unless current_user
       flash[:alert] = "Please log in"
+      session[:previous_url] = request.fullpath
       redirect_to new_session_path
     end
   end
 
   def require_user
-  redirect_to root_path unless current_user
+    redirect_to root_path unless current_user
   end
   
 end
