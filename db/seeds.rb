@@ -27,17 +27,14 @@ puts "========================================================="
 150.times do
   	name = Faker::Name.name.split
 
-  	type = ["Doctor", "Counsellor", "Organization"].sample
-
   	Provider.create!(
-	    first_name: (name.first unless type == "Organization"),
-	    last_name: (name.last unless type == "Organization"),
+	    first_name: (name.first),
+	    last_name: (name.last),
 	    role: nil,
 	    organization_name: Faker::Company.name,
 	    full_address: nil,
 	    phone_number: Faker::PhoneNumber.phone_number,
 	    waiting_period: [*1..10].sample,
-	    type: type,
 	    address_line1: Faker::Address.street_address,
 	    address_line2: nil,
 	    city: Faker::Address.city,

@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20141218205246) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "provider_id"
   end
 
 end
