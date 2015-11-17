@@ -9,7 +9,6 @@ class ProvidersController < ApplicationController
       %w[first_name last_name organization_name].each do |field|
         @providers += Provider.where("LOWER(#{field}) LIKE LOWER(?)", "%#{params[:search]}%") 
       end
-      # @providers.sort_by { |provider| provider.organization_name}
     else
       @providers = Provider.all 
     end
@@ -30,7 +29,6 @@ class ProvidersController < ApplicationController
   
   def new
     @provider = Provider.new
-    @type = @type || params[:type].capitalize
   end
   
   def create
@@ -39,7 +37,6 @@ class ProvidersController < ApplicationController
     if @provider.save
       redirect_to @provider, notice: "D.O.C Successfully Added!"
     else
-      @type = provider_params[:type]
       flash[:message] = "Something did not validate"
       render 'new'
     end
@@ -67,8 +64,7 @@ class ProvidersController < ApplicationController
 
 private
   def provider_params
-    # required_param = params[:organization] || params[:doctor] || params[:counsellor] || params[:provider]
-    params.require(params.keys[2].to_sym) # => :provider
+    params.require(:provider)
           .permit(:first_name, 
                   :last_name, 
                   :full_address, 
@@ -77,8 +73,7 @@ private
                   :city, 
                   :province, 
                   :area_code, 
-                  :phone_number, 
-                  :type, 
+                  :phone_number,
                   :waiting_period,
                   :organization_name,
                   :image

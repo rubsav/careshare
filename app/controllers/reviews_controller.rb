@@ -48,7 +48,7 @@ class ReviewsController < ApplicationController
   end
 
   def load_provider
-    provider = params[:doctor_id] || params[:counsellor_id] || params[:organization_id] || params[:provider_id]
+    provider = params[:provider_id]
     @provider = Provider.find(provider)
   end
 

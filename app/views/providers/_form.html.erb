@@ -10,23 +10,20 @@
 		</div>
 	<% end %>
 	<div class="main-form">
-		<%= f.hidden_field :type, value: @type %>
 		<div class="new-provider-form">
 			<%= f.label :organization_name %>
 			<%= f.text_field :organization_name %>
 		</div>
-
-		<% unless @type == "Organization" %>
-			<div class="new-provider-form">
-				<%= f.label :first_name %>
-				<%= f.text_field :first_name %>
-			</div>
-			<div class="new-provider-form">
-				<%= f.label :last_name %>
-				<%= f.text_field :last_name %>
-			</div>
-		<% end %>
-
+		
+		<div class="new-provider-form">
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+		</div>
+		<div class="new-provider-form">
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+		</div>
+		
 		<div class="new-provider-form">
 			<%= f.label :address_line1 %>
 			<%= f.text_field :address_line1 %>

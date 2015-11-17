@@ -12,7 +12,7 @@
     <% end %>
 
 <div class="question-area">  
-  <h4 class="provider-rating-qs">Was your <%= (@provider.type).downcase %> knowledgable of trans healthcare?</h4>
+  <h4 class="provider-rating-qs">Was your Provider knowledgable of trans healthcare?</h4>
     <label class="field"> 
         <%= f.radio_button :knowledge_rating, 4 %>
         Strongly Agree
@@ -114,7 +114,7 @@
 </div>
 
 <div class="question-area">  
-    <h4 class="provider-rating-qs">Would you recommend this <%= (@provider.type).downcase %>?</h4>
+    <h4 class="provider-rating-qs">Would you recommend this Provider?</h4>
       <label class="field">
       <%= f.radio_button :recommendation_rating, 4 %>
       Yes
