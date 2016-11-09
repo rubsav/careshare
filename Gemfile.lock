@@ -78,6 +78,7 @@ GEM
     mimemagic (0.3.2)
     minitest (5.9.1)
     multi_json (1.12.1)
+    pg (0.19.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -154,6 +155,7 @@ DEPENDENCIES
   honeypot-captcha
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   pry-rails
   quiet_assets
   rails (= 4.1.7)
