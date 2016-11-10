@@ -35,7 +35,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.new(provider_params)
     @provider.user_id = current_user.id
     if @provider.save
-      redirect_to @provider, notice: "D.O.C Successfully Added!"
+      redirect_to @provider, notice: "Provider Successfully Added!"
     else
       flash[:message] = "Something did not validate"
       render 'new'

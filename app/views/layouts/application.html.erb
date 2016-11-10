@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DocTalk</title>
+  <title>CareShare</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
 </head>
-  <header>
-    <nav class="main-nav">
-      <ul>
-         <% if flash[:notice] %>
-         <p id="notice"><%= flash[:notice] %></p>
-         <% end %>
+
+<body class="w3-light-grey">
+<header class="w3-display-container w3-grayscale-min" id="home">
+
+<!-- Links (sit on top) -->
+<nav class="main-nav">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s2">
+      <%= link_to 'About', root_path, class: "w3-btn-block w3-hover-white"%>
+    </div>
+     <div class="w3-col s3">
+      <%= link_to "Rate your care provider", new_provider_path, class: "w3-btn-block w3-hover-white" %> 
+    </div>
+    <div class="w3-col s4">
+      <%= link_to "View All Caregiving Providers", providers_path, class: "w3-btn-block w3-hover-white" %> 
+    </div>
+    <div class="w3-col w3-padding s3">
+      <% if current_user %>
+        Signed in as <%= link_to current_user.username, user_path(current_user) %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+      <% else %>
+        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
+      <% end %>
+    </div>
+  </div>
+  <ul>
+     <% if flash[:notice] %>
+     <p id="notice"><%= flash[:notice] %></p>
+     <% end %>
+
+     <% if flash[:alert] %>
+     <p id="alert"><%= flash[:alert] %></p>
+     <% end %>
+  </ul>
+</nav>
+</header>
+<%= yield %>
 
 
-         <% if flash[:alert] %>
-         <p id="alert"><%= flash[:alert] %></p>
-         <% end %>
+<!-- Footer -->
+<footer class="w3-bottom w3-center w3-large">
+  <p class="copyright">A review site by Ruben Avila Aguilar</p>
+</footer>
 
-         <li class="userinfo">
-          <% if current_user %>
-          Signed in as <%= link_to current_user.username, user_path(current_user) %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-          <% else %>
-          <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-          <% end %>
-        </li>
-        <li><%= link_to 'Home', root_path %></li> 
-        <li><%= link_to "Share A D.O.C", root_path %></li> 
-        <li><%= link_to "View All D.O.C's", providers_path %></li> 
-      </ul>
-    </nav>
-  </header>
-
-  <body>
-    <%= yield %>
-  </body>
-  
+</body>
 </html>

@@ -1,120 +1,23 @@
-* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* STYLESSS*/
-
-
-html {
- 
-  /*background: -webkit-linear-gradient(90deg, #DAE2F8 10%, #f48686 90%); /* Chrome 10+, Saf5.1+ */
-  /*background:    -moz-linear-gradient(90deg, #DAE2F8 10%, #f48686 90%); /* FF3.6+ */
-  /*background:     -ms-linear-gradient(90deg, #DAE2F8 10%, #f48686 90%); /* IE10 */
-  /*background:      -o-linear-gradient(90deg, #DAE2F8 10%, #f48686 90%); /* Opera 11.10+ */
-  /*background:         linear-gradient(90deg, #DAE2F8 10%, #f48686 90%); /* W3C */
-        
-}
-
-
-a {
-	font-size: 19px;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 400;
-	color: #525252;
-	text-decoration: none;
-}
-
-h1 {
-	font-size: 30px;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 300;
-	text-align: center;
-}
-
-h2 {
-	font-size: 25px;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 700;
-}
-
-h3 {
-	font-size: 23px;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 400;
-}
-
-h4 {
-	font-size: 20px;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 700;
-}
-
-h5 {
-	font-size: 20px;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 400;
-}
-
-p, ul, ol, li {
-	font-size: 17px;
-	font-family: 'Quicksand', sans-serif;
-	font-weight: 300;
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
 }
 
 /*
 HOMEPAGE
 */
-.share-provider-area {
-	display: block;
-	width: 80%;
 
-	/*background-color: #ebebeb;*/
-	margin: 0 auto;	
+.bgimg {
+    background-position: center;
+    background-image: url("sharecareimg.jpg");
+    min-height:60%;
+    filter: none !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #00bce4;	
 }
 
 .share-provider {
@@ -132,7 +35,6 @@ HOMEPAGE
 	margin-bottom: 2em;
 	margin-right: 0.75em;
 	margin-left: 0.60em ;
-
 
 	}
 
@@ -185,9 +87,8 @@ h4, .provider-rating-qs {
 }
 
 .new-provider-form {
-	/*display: inline-block;
-	width: 60%;
-	margin: 0 auto;	*/
+	display: inline-block;
+	margin: 5% auto;	
 }
 
 #provider_organization_name, 
@@ -210,10 +111,9 @@ h4, .provider-rating-qs {
 
 .add-provider {
 	display: block;
-	width: 70%;
-	background-color: #ebebeb;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
-	padding: 1em 2em 1em 2em;
 }
 
 #providers {
@@ -225,10 +125,14 @@ h4, .provider-rating-qs {
 
 .main-form {
 	display: block;
-	width: 60%;
-	margin: 0 38% auto;
+	width: 80%;
+	margin: 5% 5% auto;
+	column-count: 3;
 }
 
+.copyright {
+	font-size: 10px;
+}
 
 /*
 PROVIDERS INDEX/SEARCH
@@ -246,6 +150,7 @@ PROVIDERS INDEX/SEARCH
 .search-bar {
 	display: block;
 	margin-left: 20%;
+	margin-top: 5em;
 
 }
 
@@ -416,8 +321,10 @@ a.account-links {
 
 }
 
-.user-review {
-
+.session-new {
+	position: absolute;
+    top: 20%;
+    left: 40%;
 }
 
 .user-ratings {
@@ -443,7 +350,6 @@ a.account-links {
 	display: inline-block;
 	margin-top: 0;
 	margin-right: 2em;
-	
 	
 }
 
