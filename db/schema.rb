@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 20141218205246) do
   create_table "ratings", force: true do |t|
     t.integer  "user_id"
     t.integer  "provider_id"
+    t.integer  "knowledge_rating"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "knowledge_rating"
     t.integer  "support_rating"
     t.integer  "comfort_rating"
     t.integer  "accessibility_rating"
@@ -63,7 +63,6 @@ ActiveRecord::Schema.define(version: 20141218205246) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "provider_id"
   end
 
 end
