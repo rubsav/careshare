@@ -1,0 +1,2913 @@
+/* W3.CSS 2.82 by Jan Egil and Borge Refsnes */
+/* line 3, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+html {
+  box-sizing: border-box;
+}
+
+/* line 3, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+/* line 5, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 5, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+body {
+  margin: 0;
+}
+
+/* line 6, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+audio, canvas, progress, video {
+  display: inline-block;
+}
+
+/* line 7, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 8, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 8, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+[hidden], template {
+  display: none;
+}
+
+/* line 9, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+/* line 10, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+a:active, a:hover {
+  outline-width: 0;
+}
+
+/* line 10, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/* line 11, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+dfn {
+  font-style: italic;
+}
+
+/* line 11, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 12, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+small {
+  font-size: 80%;
+}
+
+/* line 12, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 13, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 13, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 13, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 14, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+img {
+  border-style: none;
+}
+
+/* line 14, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 15, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+/* line 16, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/* line 17, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+
+/* line 17, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 18, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+button, input {
+  overflow: visible;
+}
+
+/* line 18, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+button, select {
+  text-transform: none;
+}
+
+/* line 19, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+/* line 20, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* line 21, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/* line 22, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/* line 23, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 23, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+textarea {
+  overflow: auto;
+}
+
+/* line 24, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+[type=checkbox], [type=radio] {
+  padding: 0;
+}
+
+/* line 25, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 26, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+/* line 27, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 28, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/* line 29, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+/* End extract */
+/* line 31, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+html, body {
+  font-family: Verdana,sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* line 31, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+html {
+  overflow-x: hidden;
+}
+
+/* line 32, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h1, h2, h3, h4, h5, h6, .w3-slim, .w3-wide {
+  font-family: "Segoe UI",Arial,sans-serif;
+}
+
+/* line 33, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h1 {
+  font-size: 36px;
+}
+
+/* line 33, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h2 {
+  font-size: 30px;
+}
+
+/* line 33, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h3 {
+  font-size: 24px;
+}
+
+/* line 33, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h4 {
+  font-size: 20px;
+}
+
+/* line 33, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h5 {
+  font-size: 18px;
+}
+
+/* line 33, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h6 {
+  font-size: 16px;
+}
+
+/* line 34, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-serif {
+  font-family: "Times New Roman",Times,serif;
+}
+
+/* line 35, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+/* line 35, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-wide {
+  letter-spacing: 4px;
+}
+
+/* line 36, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit;
+}
+
+/* line 37, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* line 38, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+img {
+  margin-bottom: -5px;
+}
+
+/* line 38, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+a {
+  color: inherit;
+}
+
+/* line 39, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 40, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-table, .w3-table-all {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+}
+
+/* line 41, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-table-all {
+  border: 1px solid #ccc;
+}
+
+/* line 42, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-bordered tr, .w3-table-all tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 43, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-striped tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* line 44, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-table-all tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* line 45, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-table-all tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* line 46, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-hoverable tbody tr:hover, .w3-ul.w3-hoverable li:hover {
+  background-color: #ccc;
+}
+
+/* line 47, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-centered tr th, .w3-centered tr td {
+  text-align: center;
+}
+
+/* line 48, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-table td, .w3-table th, .w3-table-all td, .w3-table-all th {
+  padding: 8px 8px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* line 49, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-table th:first-child, .w3-table td:first-child, .w3-table-all th:first-child, .w3-table-all td:first-child {
+  padding-left: 16px;
+}
+
+/* line 50, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn, .w3-btn-block {
+  border: none;
+  display: inline-block;
+  outline: 0;
+  padding: 6px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* line 51, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn:hover, .w3-btn-block:hover, .w3-btn-floating:hover, .w3-btn-floating-large:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 52, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn, .w3-btn-floating, .w3-btn-floating-large, .w3-closenav, .w3-opennav {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 53, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn-floating, .w3-btn-floating-large {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* line 54, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn-floating {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* line 54, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn-floating-large {
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+}
+
+/* line 55, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-disabled, .w3-btn:disabled, .w3-btn-floating:disabled, .w3-btn-floating-large:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+/* line 56, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn.w3-disabled *, .w3-btn-block.w3-disabled, .w3-btn-floating.w3-disabled *, .w3-btn:disabled *, .w3-btn-floating:disabled * {
+  pointer-events: none;
+}
+
+/* line 58, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn.w3-disabled:hover, .w3-btn-block.w3-disabled:hover, .w3-btn:disabled:hover, .w3-btn-floating.w3-disabled:hover, .w3-btn-floating:disabled:hover,
+.w3-btn-floating-large.w3-disabled:hover, .w3-btn-floating-large:disabled:hover {
+  box-shadow: none;
+}
+
+/* line 59, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn-group .w3-btn {
+  float: left;
+}
+
+/* line 59, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn-block {
+  width: 100%;
+}
+
+/* line 60, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn-bar .w3-btn {
+  box-shadow: none;
+  background-color: inherit;
+  color: inherit;
+  float: left;
+}
+
+/* line 60, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn-bar .w3-btn:hover {
+  background-color: #ccc;
+}
+
+/* line 61, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-badge, .w3-tag, .w3-sign {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+}
+
+/* line 62, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-badge {
+  border-radius: 50%;
+}
+
+/* line 63, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+ul.w3-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 63, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+ul.w3-ul li {
+  padding: 6px 2px 6px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 63, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+ul.w3-ul li:last-child {
+  border-bottom: none;
+}
+
+/* line 64, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-tooltip, .w3-display-container {
+  position: relative;
+}
+
+/* line 64, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-tooltip .w3-text {
+  display: none;
+}
+
+/* line 64, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-tooltip:hover .w3-text {
+  display: inline-block;
+}
+
+/* line 65, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* line 66, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar li {
+  float: left;
+}
+
+/* line 66, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar li a, .w3-navitem {
+  display: block;
+  padding: 8px 16px;
+}
+
+/* line 66, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar li a:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+/* line 67, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar .w3-dropdown-hover, .w3-navbar .w3-dropdown-click {
+  position: static;
+}
+
+/* line 68, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar .w3-dropdown-hover:hover, .w3-navbar .w3-dropdown-hover:first-child, .w3-navbar .w3-dropdown-click:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* line 69, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar a, .w3-topnav a, .w3-sidenav a, .w3-dropdown-content a, .w3-accordion-content a, .w3-dropnav a {
+  text-decoration: none !important;
+}
+
+/* line 70, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-navbar .w3-opennav.w3-right {
+  float: right !important;
+}
+
+/* line 70, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-topnav {
+  padding: 8px 8px;
+}
+
+/* line 71, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-topnav a {
+  padding: 0 8px;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: border-bottom .3s;
+  transition: border-bottom .3s;
+}
+
+/* line 72, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-topnav a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+/* line 72, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-topnav .w3-dropdown-hover a {
+  border-bottom: 0;
+}
+
+/* line 73, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-opennav, .w3-closenav {
+  color: inherit;
+}
+
+/* line 73, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-opennav:hover, .w3-closenav:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* line 80, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-btn, .w3-btn-floating, .w3-dropnav a, .w3-btn-floating-large, .w3-btn-block, .w3-hover-shadow, .w3-hover-opacity, .w3-hover-opacity-off, .w3-hover-sepia, .w3-hover-grayscale, .w3-hover-greyscale,
+.w3-navbar a, .w3-sidenav a, .w3-pagination li a, .w3-hoverable tbody tr, .w3-hoverable li, .w3-accordion-content a, .w3-dropdown-content a, .w3-dropdown-click:hover, .w3-dropdown-hover:hover, .w3-opennav, .w3-closenav, .w3-closebtn,
+.w3-hover-amber, .w3-hover-aqua, .w3-hover-blue, .w3-hover-light-blue, .w3-hover-brown, .w3-hover-cyan, .w3-hover-blue-grey, .w3-hover-green, .w3-hover-light-green, .w3-hover-indigo, .w3-hover-khaki, .w3-hover-lime, .w3-hover-orange, .w3-hover-deep-orange, .w3-hover-pink,
+.w3-hover-purple, .w3-hover-deep-purple, .w3-hover-red, .w3-hover-sand, .w3-hover-teal, .w3-hover-yellow, .w3-hover-white, .w3-hover-black, .w3-hover-grey, .w3-hover-light-grey, .w3-hover-dark-grey, .w3-hover-text-amber, .w3-hover-text-aqua, .w3-hover-text-blue, .w3-hover-text-light-blue,
+.w3-hover-text-brown, .w3-hover-text-cyan, .w3-hover-text-blue-grey, .w3-hover-text-green, .w3-hover-text-light-green, .w3-hover-text-indigo, .w3-hover-text-khaki, .w3-hover-text-lime, .w3-hover-text-orange, .w3-hover-text-deep-orange, .w3-hover-text-pink, .w3-hover-text-purple,
+.w3-hover-text-deep-purple, .w3-hover-text-red, .w3-hover-text-sand, .w3-hover-text-teal, .w3-hover-text-yellow, .w3-hover-text-white, .w3-hover-text-black, .w3-hover-text-grey, .w3-hover-text-light-grey, .w3-hover-text-dark-grey {
+  -webkit-transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s,filter 0.3s;
+  transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s,filter 0.3s;
+}
+
+/* line 81, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-ripple:active {
+  opacity: 0.5;
+}
+
+/* line 81, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-ripple {
+  -webkit-transition: opacity 0s;
+  transition: opacity 0s;
+}
+
+/* line 82, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sidenav {
+  height: 100%;
+  width: 200px;
+  background-color: #fff;
+  position: fixed !important;
+  z-index: 1;
+  overflow: auto;
+}
+
+/* line 83, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sidenav a {
+  padding: 4px 2px 4px 16px;
+}
+
+/* line 83, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sidenav a:hover {
+  background-color: #ccc;
+}
+
+/* line 83, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sidenav a, .w3-dropnav a {
+  display: block;
+}
+
+/* line 84, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sidenav .w3-dropdown-hover:hover, .w3-sidenav .w3-dropdown-hover:first-child, .w3-sidenav .w3-dropdown-click:hover, .w3-dropnav a:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* line 85, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sidenav .w3-dropdown-hover, .w3-sidenav .w3-dropdown-click {
+  width: 100%;
+}
+
+/* line 85, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sidenav .w3-dropdown-hover .w3-dropdown-content, .w3-sidenav .w3-dropdown-click .w3-dropdown-content {
+  min-width: 100%;
+}
+
+/* line 86, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-main, #main {
+  transition: margin-left .4s;
+}
+
+/* line 87, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-modal {
+  z-index: 3;
+  display: none;
+  padding-top: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 88, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-modal-content {
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  width: 600px;
+}
+
+/* line 88, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-closebtn {
+  text-decoration: none;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: inherit;
+}
+
+/* line 89, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-closebtn:hover, .w3-closebtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 90, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 90, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pagination li {
+  display: inline;
+}
+
+/* line 91, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pagination li a {
+  text-decoration: none;
+  color: #000;
+  float: left;
+  padding: 8px 16px;
+}
+
+/* line 92, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pagination li a:hover {
+  background-color: #ccc;
+}
+
+/* line 93, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-input-group, .w3-group {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* line 94, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-input {
+  padding: 8px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #808080;
+  width: 100%;
+}
+
+/* line 95, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-label {
+  color: #009688;
+}
+
+/* line 95, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-input:not(:valid) ~ .w3-validate {
+  color: #f44336;
+}
+
+/* line 96, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-select {
+  padding: 9px 0;
+  width: 100%;
+  color: #000;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #009688;
+}
+
+/* line 97, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-select select:focus {
+  color: #000;
+  border: 1px solid #009688;
+}
+
+/* line 97, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-select option[disabled] {
+  color: #009688;
+}
+
+/* line 98, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-dropdown-click, .w3-dropdown-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* line 99, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-dropdown-hover:hover .w3-dropdown-content {
+  display: block;
+  z-index: 1;
+}
+
+/* line 100, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-dropdown-content {
+  cursor: auto;
+  color: #000;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 101, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-dropdown-content a {
+  padding: 6px 16px;
+  display: block;
+}
+
+/* line 102, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-dropdown-content a:hover {
+  background-color: #ccc;
+}
+
+/* line 103, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-accordion {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* line 104, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-accordion-content {
+  cursor: auto;
+  display: none;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 105, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-accordion-content a {
+  padding: 6px 16px;
+  display: block;
+}
+
+/* line 105, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-accordion-content a:hover {
+  background-color: #ccc;
+}
+
+/* line 106, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-progress-container {
+  width: 100%;
+  height: 1.5em;
+  position: relative;
+  background-color: #f1f1f1;
+}
+
+/* line 107, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-progressbar {
+  background-color: #757575;
+  height: 100%;
+  position: absolute;
+  line-height: inherit;
+}
+
+/* line 108, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+input[type=checkbox].w3-check, input[type=radio].w3-radio {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+}
+
+/* line 109, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+input[type=checkbox].w3-check:checked + .w3-validate, input[type=radio].w3-radio:checked + .w3-validate {
+  color: #009688;
+}
+
+/* line 110, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radio:disabled + .w3-validate {
+  color: #aaa;
+}
+
+/* line 111, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-responsive {
+  overflow-x: auto;
+}
+
+/* line 113, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-container:after, .w3-panel:after, .w3-row:after, .w3-row-padding:after, .w3-topnav:after, .w3-clear:after, .w3-btn-group:before, .w3-btn-group:after, .w3-btn-bar:before, .w3-btn-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 114, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+  float: left;
+  width: 100%;
+}
+
+/* line 115, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s1 {
+  width: 8.33333%;
+}
+
+/* line 116, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s2 {
+  width: 16.66666%;
+}
+
+/* line 117, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s3 {
+  width: 24.99999%;
+}
+
+/* line 118, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s4 {
+  width: 33.33333%;
+}
+
+/* line 119, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s5 {
+  width: 41.66666%;
+}
+
+/* line 120, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s6 {
+  width: 49.99999%;
+}
+
+/* line 121, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s7 {
+  width: 58.33333%;
+}
+
+/* line 122, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s8 {
+  width: 66.66666%;
+}
+
+/* line 123, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s9 {
+  width: 74.99999%;
+}
+
+/* line 124, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s10 {
+  width: 83.33333%;
+}
+
+/* line 125, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s11 {
+  width: 91.66666%;
+}
+
+/* line 126, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-col.s12, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+  width: 99.99999%;
+}
+
+@media only screen and (min-width: 601px) {
+  /* line 128, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m1 {
+    width: 8.33333%;
+  }
+
+  /* line 129, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m2 {
+    width: 16.66666%;
+  }
+
+  /* line 130, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m3, .w3-quarter {
+    width: 24.99999%;
+  }
+
+  /* line 131, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m4, .w3-third {
+    width: 33.33333%;
+  }
+
+  /* line 132, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m5 {
+    width: 41.66666%;
+  }
+
+  /* line 133, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m6, .w3-half {
+    width: 49.99999%;
+  }
+
+  /* line 134, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m7 {
+    width: 58.33333%;
+  }
+
+  /* line 135, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m8, .w3-twothird {
+    width: 66.66666%;
+  }
+
+  /* line 136, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m9, .w3-threequarter {
+    width: 74.99999%;
+  }
+
+  /* line 137, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m10 {
+    width: 83.33333%;
+  }
+
+  /* line 138, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m11 {
+    width: 91.66666%;
+  }
+
+  /* line 139, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.m12 {
+    width: 99.99999%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  /* line 141, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l1 {
+    width: 8.33333%;
+  }
+
+  /* line 142, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l2 {
+    width: 16.66666%;
+  }
+
+  /* line 143, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l3, .w3-quarter {
+    width: 24.99999%;
+  }
+
+  /* line 144, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l4, .w3-third {
+    width: 33.33333%;
+  }
+
+  /* line 145, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l5 {
+    width: 41.66666%;
+  }
+
+  /* line 146, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l6, .w3-half {
+    width: 49.99999%;
+  }
+
+  /* line 147, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l7 {
+    width: 58.33333%;
+  }
+
+  /* line 148, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l8, .w3-twothird {
+    width: 66.66666%;
+  }
+
+  /* line 149, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l9, .w3-threequarter {
+    width: 74.99999%;
+  }
+
+  /* line 150, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l10 {
+    width: 83.33333%;
+  }
+
+  /* line 151, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l11 {
+    width: 91.66666%;
+  }
+
+  /* line 152, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-col.l12 {
+    width: 99.99999%;
+  }
+}
+/* line 153, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-content {
+  max-width: 980px;
+  margin: auto;
+}
+
+/* line 154, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-rest {
+  overflow: hidden;
+}
+
+/* line 155, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-hide {
+  display: none !important;
+}
+
+/* line 155, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-show-block, .w3-show {
+  display: block !important;
+}
+
+/* line 155, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-show-inline-block {
+  display: inline-block !important;
+}
+
+@media (max-width: 600px) {
+  /* line 156, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-modal-content {
+    margin: 0 10px;
+    width: auto !important;
+  }
+
+  /* line 156, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-modal {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 157, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-modal-content {
+    width: 500px;
+  }
+
+  /* line 157, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-modal {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 993px) {
+  /* line 158, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-modal-content {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 159, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-topnav a {
+    display: block;
+  }
+
+  /* line 159, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-navbar li:not(.w3-opennav) {
+    float: none;
+    width: 100% !important;
+  }
+
+  /* line 159, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-navbar li.w3-right {
+    float: none !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 160, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-topnav .w3-dropdown-hover .w3-dropdown-content, .w3-navbar .w3-dropdown-click .w3-dropdown-content, .w3-navbar .w3-dropdown-hover .w3-dropdown-content {
+    position: relative;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 161, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-topnav, .w3-navbar {
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  /* line 162, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-hide-small {
+    display: none !important;
+  }
+}
+@media (max-width: 992px) and (min-width: 601px) {
+  /* line 163, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-hide-medium {
+    display: none !important;
+  }
+}
+@media (min-width: 993px) {
+  /* line 164, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-hide-large {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 165, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-sidenav.w3-collapse {
+    display: none;
+  }
+
+  /* line 165, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-main {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+@media screen and (min-width: 993px) {
+  /* line 166, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  .w3-sidenav.w3-collapse {
+    display: block !important;
+  }
+}
+/* line 167, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-top, .w3-bottom {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 167, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-top {
+  top: 0;
+}
+
+/* line 167, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-bottom {
+  bottom: 0;
+}
+
+/* line 168, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* line 169, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-left {
+  float: left !important;
+}
+
+/* line 169, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-right {
+  float: right !important;
+}
+
+/* line 170, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-tiny {
+  font-size: 10px !important;
+}
+
+/* line 170, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-small {
+  font-size: 12px !important;
+}
+
+/* line 171, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-medium {
+  font-size: 15px !important;
+}
+
+/* line 171, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-large {
+  font-size: 18px !important;
+}
+
+/* line 172, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-xlarge {
+  font-size: 24px !important;
+}
+
+/* line 172, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-xxlarge {
+  font-size: 36px !important;
+}
+
+/* line 173, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-xxxlarge {
+  font-size: 48px !important;
+}
+
+/* line 173, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-jumbo {
+  font-size: 64px !important;
+}
+
+/* line 174, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-vertical {
+  word-break: break-all;
+  line-height: 1;
+  text-align: center;
+  width: 0.6em;
+}
+
+/* line 175, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-left-align {
+  text-align: left !important;
+}
+
+/* line 175, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-right-align {
+  text-align: right !important;
+}
+
+/* line 176, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-justify {
+  text-align: justify !important;
+}
+
+/* line 176, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-center {
+  text-align: center !important;
+}
+
+/* line 177, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-topleft {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* line 177, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-topright {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 178, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-bottomleft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+/* line 178, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-bottomright {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 179, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+/* line 180, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-left {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+}
+
+/* line 181, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-right {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+}
+
+/* line 182, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-topmiddle {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+}
+
+/* line 183, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-display-bottommiddle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+}
+
+/* line 184, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-circle {
+  border-radius: 50% !important;
+}
+
+/* line 185, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-round-small {
+  border-radius: 2px !important;
+}
+
+/* line 185, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-round, .w3-round-medium {
+  border-radius: 4px !important;
+}
+
+/* line 186, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-round-large {
+  border-radius: 8px !important;
+}
+
+/* line 186, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-round-xlarge {
+  border-radius: 16px !important;
+}
+
+/* line 187, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-round-xxlarge {
+  border-radius: 32px !important;
+}
+
+/* line 187, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-round-jumbo {
+  border-radius: 64px !important;
+}
+
+/* line 188, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-0 {
+  border: 0 !important;
+}
+
+/* line 188, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border {
+  border: 1px solid #cccccc !important;
+}
+
+/* line 189, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-top {
+  border-top: 1px solid #cccccc !important;
+}
+
+/* line 189, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-bottom {
+  border-bottom: 1px solid #cccccc !important;
+}
+
+/* line 190, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-left {
+  border-left: 1px solid #cccccc !important;
+}
+
+/* line 190, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-right {
+  border-right: 1px solid #cccccc !important;
+}
+
+/* line 191, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-margin {
+  margin: 16px !important;
+}
+
+/* line 191, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-margin-0 {
+  margin: 0 !important;
+}
+
+/* line 192, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-margin-top {
+  margin-top: 16px !important;
+}
+
+/* line 192, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-margin-bottom {
+  margin-bottom: 16px !important;
+}
+
+/* line 193, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-margin-left {
+  margin-left: 16px !important;
+}
+
+/* line 193, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-margin-right {
+  margin-right: 16px !important;
+}
+
+/* line 194, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-section {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/* line 195, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-tiny {
+  padding: 2px 4px !important;
+}
+
+/* line 195, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-small {
+  padding: 4px 8px !important;
+}
+
+/* line 196, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-medium, .w3-padding, .w3-form {
+  padding: 8px 16px !important;
+}
+
+/* line 197, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-large {
+  padding: 12px 24px !important;
+}
+
+/* line 197, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-xlarge {
+  padding: 16px 32px !important;
+}
+
+/* line 198, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-xxlarge {
+  padding: 24px 48px !important;
+}
+
+/* line 198, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-jumbo {
+  padding: 32px 64px !important;
+}
+
+/* line 199, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-4 {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+/* line 200, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-8 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+/* line 201, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-12 {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+/* line 202, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-16 {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+/* line 203, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-24 {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+/* line 204, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-32 {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+
+/* line 205, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-48 {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important;
+}
+
+/* line 206, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-64 {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+/* line 207, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-128 {
+  padding-top: 128px !important;
+  padding-bottom: 128px !important;
+}
+
+/* line 208, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-0 {
+  padding: 0 !important;
+}
+
+/* line 209, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-top {
+  padding-top: 8px !important;
+}
+
+/* line 209, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-bottom {
+  padding-bottom: 8px !important;
+}
+
+/* line 210, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-left {
+  padding-left: 16px !important;
+}
+
+/* line 210, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-padding-right {
+  padding-right: 16px !important;
+}
+
+/* line 211, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-topbar {
+  border-top: 6px solid #cccccc !important;
+}
+
+/* line 211, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-bottombar {
+  border-bottom: 6px solid #cccccc !important;
+}
+
+/* line 212, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-leftbar {
+  border-left: 6px solid #cccccc !important;
+}
+
+/* line 212, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-rightbar {
+  border-right: 6px solid #cccccc !important;
+}
+
+/* line 213, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col {
+  padding: 0 8px;
+}
+
+/* line 214, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-spin {
+  animation: w3-spin 2s infinite linear;
+  -webkit-animation: w3-spin 2s infinite linear;
+}
+
+@-webkit-keyframes w3-spin {
+  /* line 215, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 215, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes w3-spin {
+  /* line 216, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 216, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+/* line 217, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-container {
+  padding: 0.01em 16px;
+}
+
+/* line 218, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-panel {
+  padding: 0.01em 16px;
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+/* line 219, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-example {
+  background-color: #f1f1f1;
+  padding: 0.01em 16px;
+}
+
+/* line 220, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-code, .w3-codespan {
+  font-family: Consolas,"courier new";
+  font-size: 16px;
+}
+
+/* line 221, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-code {
+  line-height: 1.4;
+  width: auto;
+  background-color: #fff;
+  padding: 8px 12px;
+  border-left: 4px solid #4CAF50;
+  word-wrap: break-word;
+}
+
+/* line 222, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-codespan {
+  color: crimson;
+  background-color: #f1f1f1;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 110%;
+}
+
+/* line 223, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-example, .w3-code {
+  margin: 20px 0;
+}
+
+/* line 223, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-card {
+  border: 1px solid #ccc;
+}
+
+/* line 224, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-card-2, .w3-example {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+/* line 225, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-card-4, .w3-hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+/* line 226, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-card-8 {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+/* line 227, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-card-12 {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+/* line 228, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-card-16 {
+  box-shadow: 0 16px 24px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21) !important;
+}
+
+/* line 229, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-card-24 {
+  box-shadow: 0 24px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22) !important;
+}
+
+/* line 230, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-fading {
+  -webkit-animation: fading 10s infinite;
+  animation: fading 10s infinite;
+}
+
+@-webkit-keyframes fading {
+  /* line 231, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 231, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 231, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fading {
+  /* line 232, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 232, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  50% {
+    opacity: 1;
+  }
+
+  /* line 232, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 233, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-opacity {
+  -webkit-animation: opac 0.8s;
+  animation: opac 0.8s;
+}
+
+@-webkit-keyframes opac {
+  /* line 234, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    opacity: 0;
+  }
+
+  /* line 234, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opac {
+  /* line 235, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    opacity: 0;
+  }
+
+  /* line 235, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    opacity: 1;
+  }
+}
+
+/* line 236, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-top {
+  position: relative;
+  -webkit-animation: animatetop 0.4s;
+  animation: animatetop 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+  /* line 237, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  /* line 237, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  /* line 238, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  /* line 238, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* line 239, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-left {
+  position: relative;
+  -webkit-animation: animateleft 0.4s;
+  animation: animateleft 0.4s;
+}
+
+@-webkit-keyframes animateleft {
+  /* line 240, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  /* line 240, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateleft {
+  /* line 241, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    left: -300px;
+    opacity: 0;
+  }
+
+  /* line 241, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* line 242, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-right {
+  position: relative;
+  -webkit-animation: animateright 0.4s;
+  animation: animateright 0.4s;
+}
+
+@-webkit-keyframes animateright {
+  /* line 243, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  /* line 243, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animateright {
+  /* line 244, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  /* line 244, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+/* line 245, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-bottom {
+  position: relative;
+  -webkit-animation: animatebottom 0.4s;
+  animation: animatebottom 0.4s;
+}
+
+@-webkit-keyframes animatebottom {
+  /* line 246, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  /* line 246, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  /* line 247, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  /* line 247, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* line 248, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-zoom {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  /* line 249, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  /* line 249, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  /* line 250, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  from {
+    transform: scale(0);
+  }
+
+  /* line 250, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+  to {
+    transform: scale(1);
+  }
+}
+
+/* line 251, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-input {
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* line 251, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-animate-input:focus {
+  width: 100% !important;
+}
+
+/* line 252, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-opacity, .w3-hover-opacity:hover {
+  opacity: 0.60;
+  filter: alpha(opacity=60);
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 253, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-opacity-off, .w3-hover-opacity-off:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 254, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-opacity-max {
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 255, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-opacity-min {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  -webkit-backface-visibility: hidden;
+}
+
+/* line 256, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-greyscale-max, .w3-grayscale-max, .w3-hover-greyscale:hover, .w3-hover-grayscale:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/* line 257, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-greyscale, .w3-grayscale {
+  -webkit-filter: grayscale(75%);
+  filter: grayscale(75%);
+}
+
+/* line 258, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-greyscale-min, .w3-grayscale-min {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%);
+}
+
+/* line 259, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sepia {
+  -webkit-filter: sepia(75%);
+  filter: sepia(75%);
+}
+
+/* line 260, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sepia-max, .w3-hover-sepia:hover {
+  -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+}
+
+/* line 261, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sepia-min {
+  -webkit-filter: sepia(50%);
+  filter: sepia(50%);
+}
+
+/* line 262, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-shadow {
+  text-shadow: 1px 1px 0 #444;
+}
+
+/* line 262, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-shadow-white {
+  text-shadow: 1px 1px 0 #ddd;
+}
+
+/* line 263, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-transparent {
+  background-color: transparent !important;
+}
+
+/* line 264, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-hover-none:hover {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Colors */
+/* line 266, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-amber, .w3-hover-amber:hover {
+  color: black !important;
+  background-color: #ffc107 !important;
+}
+
+/* line 267, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-aqua, .w3-hover-aqua:hover {
+  color: black !important;
+  background-color: cyan !important;
+}
+
+/* line 268, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-blue, .w3-hover-blue:hover {
+  color: white !important;
+  background-color: #2196f3 !important;
+}
+
+/* line 269, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-light-blue, .w3-hover-light-blue:hover {
+  color: black !important;
+  background-color: skyblue !important;
+}
+
+/* line 270, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-brown, .w3-hover-brown:hover {
+  color: white !important;
+  background-color: #795548 !important;
+}
+
+/* line 271, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-cyan, .w3-hover-cyan:hover {
+  color: black !important;
+  background-color: #00bcd4 !important;
+}
+
+/* line 272, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-blue-grey, .w3-hover-blue-grey:hover, .w3-blue-gray, .w3-hover-blue-gray:hover {
+  color: white !important;
+  background-color: #607d8b !important;
+}
+
+/* line 273, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-green, .w3-hover-green:hover {
+  color: white !important;
+  background-color: #4caf50 !important;
+}
+
+/* line 274, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-light-green, .w3-hover-light-green:hover {
+  color: black !important;
+  background-color: #8bc34a !important;
+}
+
+/* line 275, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-indigo, .w3-hover-indigo:hover {
+  color: white !important;
+  background-color: #3f51b5 !important;
+}
+
+/* line 276, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-khaki, .w3-hover-khaki:hover {
+  color: black !important;
+  background-color: khaki !important;
+}
+
+/* line 277, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-lime, .w3-hover-lime:hover {
+  color: black !important;
+  background-color: #cddc39 !important;
+}
+
+/* line 278, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-orange, .w3-hover-orange:hover {
+  color: black !important;
+  background-color: #ff9800 !important;
+}
+
+/* line 279, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-deep-orange, .w3-hover-deep-orange:hover {
+  color: white !important;
+  background-color: #ff5722 !important;
+}
+
+/* line 280, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pink, .w3-hover-pink:hover {
+  color: white !important;
+  background-color: #e91e63 !important;
+}
+
+/* line 281, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-purple, .w3-hover-purple:hover {
+  color: white !important;
+  background-color: #9c27b0 !important;
+}
+
+/* line 282, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-deep-purple, .w3-hover-deep-purple:hover {
+  color: white !important;
+  background-color: #673ab7 !important;
+}
+
+/* line 283, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-red, .w3-hover-red:hover {
+  color: white !important;
+  background-color: #f44336 !important;
+}
+
+/* line 284, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-sand, .w3-hover-sand:hover {
+  color: black !important;
+  background-color: oldlace !important;
+}
+
+/* line 285, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-teal, .w3-hover-teal:hover {
+  color: white !important;
+  background-color: #009688 !important;
+}
+
+/* line 286, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-yellow, .w3-hover-yellow:hover {
+  color: black !important;
+  background-color: #ffeb3b !important;
+}
+
+/* line 287, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-white, .w3-hover-white:hover {
+  color: black !important;
+  background-color: white !important;
+}
+
+/* line 288, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-black, .w3-hover-black:hover {
+  color: white !important;
+  background-color: black !important;
+}
+
+/* line 289, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-grey, .w3-hover-grey:hover, .w3-gray, .w3-hover-gray:hover {
+  color: black !important;
+  background-color: #9e9e9e !important;
+}
+
+/* line 290, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-light-grey, .w3-hover-light-grey:hover, .w3-light-gray, .w3-hover-light-gray:hover {
+  color: black !important;
+  background-color: #f1f1f1 !important;
+}
+
+/* line 291, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-dark-grey, .w3-hover-dark-grey:hover, .w3-dark-gray, .w3-hover-dark-gray:hover {
+  color: white !important;
+  background-color: #616161 !important;
+}
+
+/* line 292, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pale-red, .w3-hover-pale-red:hover {
+  color: black !important;
+  background-color: #ffdddd !important;
+}
+
+/* line 293, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pale-green, .w3-hover-pale-green:hover {
+  color: black !important;
+  background-color: #ddffdd !important;
+}
+
+/* line 294, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pale-yellow, .w3-hover-pale-yellow:hover {
+  color: black !important;
+  background-color: #ffffcc !important;
+}
+
+/* line 295, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-pale-blue, .w3-hover-pale-blue:hover {
+  color: black !important;
+  background-color: #ddffff !important;
+}
+
+/* line 296, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-amber, .w3-hover-text-amber:hover {
+  color: #ffc107 !important;
+}
+
+/* line 297, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-aqua, .w3-hover-text-aqua:hover {
+  color: cyan !important;
+}
+
+/* line 298, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-blue, .w3-hover-text-blue:hover {
+  color: #2196f3 !important;
+}
+
+/* line 299, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-light-blue, .w3-hover-text-light-blue:hover {
+  color: skyblue !important;
+}
+
+/* line 300, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-brown, .w3-hover-text-brown:hover {
+  color: #795548 !important;
+}
+
+/* line 301, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-cyan, .w3-hover-text-cyan:hover {
+  color: #00bcd4 !important;
+}
+
+/* line 302, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-blue-grey, .w3-hover-text-blue-grey:hover, .w3-text-blue-gray, .w3-hover-text-blue-gray:hover {
+  color: #607d8b !important;
+}
+
+/* line 303, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-green, .w3-hover-text-green:hover {
+  color: #4caf50 !important;
+}
+
+/* line 304, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-light-green, .w3-hover-text-light-green:hover {
+  color: #8bc34a !important;
+}
+
+/* line 305, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-indigo, .w3-hover-text-indigo:hover {
+  color: #3f51b5 !important;
+}
+
+/* line 306, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-khaki, .w3-hover-text-khaki:hover {
+  color: #b4aa50 !important;
+}
+
+/* line 307, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-lime, .w3-hover-text-lime:hover {
+  color: #cddc39 !important;
+}
+
+/* line 308, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-orange, .w3-hover-text-orange:hover {
+  color: #ff9800 !important;
+}
+
+/* line 309, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-deep-orange, .w3-hover-text-deep-orange:hover {
+  color: #ff5722 !important;
+}
+
+/* line 310, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-pink, .w3-hover-text-pink:hover {
+  color: #e91e63 !important;
+}
+
+/* line 311, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-purple, .w3-hover-text-purple:hover {
+  color: #9c27b0 !important;
+}
+
+/* line 312, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-deep-purple, .w3-hover-text-deep-purple:hover {
+  color: #673ab7 !important;
+}
+
+/* line 313, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-red, .w3-hover-text-red:hover {
+  color: #f44336 !important;
+}
+
+/* line 314, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-sand, .w3-hover-text-sand:hover {
+  color: oldlace !important;
+}
+
+/* line 315, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-teal, .w3-hover-text-teal:hover {
+  color: #009688 !important;
+}
+
+/* line 316, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-yellow, .w3-hover-text-yellow:hover {
+  color: #d2be0e !important;
+}
+
+/* line 317, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-white, .w3-hover-text-white:hover {
+  color: white !important;
+}
+
+/* line 318, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-black, .w3-hover-text-black:hover {
+  color: black !important;
+}
+
+/* line 319, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-grey, .w3-hover-text-grey:hover, .w3-text-gray, .w3-hover-text-gray:hover {
+  color: #757575 !important;
+}
+
+/* line 320, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-light-grey, .w3-hover-text-light-grey:hover, .w3-text-light-gray, .w3-hover-text-light-gray:hover {
+  color: #f1f1f1 !important;
+}
+
+/* line 321, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-text-dark-grey, .w3-hover-text-dark-grey:hover, .w3-text-dark-gray, .w3-hover-text-dark-gray:hover {
+  color: #3a3a3a !important;
+}
+
+/* line 322, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-amber, .w3-hover-border-amber:hover {
+  border-color: #ffc107 !important;
+}
+
+/* line 323, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-aqua, .w3-hover-border-aqua:hover {
+  border-color: cyan !important;
+}
+
+/* line 324, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-blue, .w3-hover-border-blue:hover {
+  border-color: #2196f3 !important;
+}
+
+/* line 325, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-light-blue, .w3-hover-border-light-blue:hover {
+  border-color: skyblue !important;
+}
+
+/* line 326, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-brown, .w3-hover-border-brown:hover {
+  border-color: #795548 !important;
+}
+
+/* line 327, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-cyan, .w3-hover-border-cyan:hover {
+  border-color: #00bcd4 !important;
+}
+
+/* line 328, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-blue-grey, .w3-hover-blue-grey:hover, .w3-border-blue-gray, .w3-hover-blue-gray:hover {
+  border-color: #607d8b !important;
+}
+
+/* line 329, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-green, .w3-hover-border-green:hover {
+  border-color: #4caf50 !important;
+}
+
+/* line 330, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-light-green, .w3-hover-border-light-green:hover {
+  border-color: #8bc34a !important;
+}
+
+/* line 331, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-indigo, .w3-hover-border-indigo:hover {
+  border-color: #3f51b5 !important;
+}
+
+/* line 332, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-khaki, .w3-hover-border-khaki:hover {
+  border-color: khaki !important;
+}
+
+/* line 333, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-lime, .w3-hover-border-lime:hover {
+  border-color: #cddc39 !important;
+}
+
+/* line 334, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-orange, .w3-hover-border-orange:hover {
+  border-color: #ff9800 !important;
+}
+
+/* line 335, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-deep-orange, .w3-hover-border-deep-orange:hover {
+  border-color: #ff5722 !important;
+}
+
+/* line 336, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-pink, .w3-hover-border-pink:hover {
+  border-color: #e91e63 !important;
+}
+
+/* line 337, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-purple, .w3-hover-border-purple:hover {
+  border-color: #9c27b0 !important;
+}
+
+/* line 338, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-deep-purple, .w3-hover-border-deep-purple:hover {
+  border-color: #673ab7 !important;
+}
+
+/* line 339, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-red, .w3-hover-border-red:hover {
+  border-color: #f44336 !important;
+}
+
+/* line 340, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-sand, .w3-hover-border-sand:hover {
+  border-color: oldlace !important;
+}
+
+/* line 341, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-teal, .w3-hover-border-teal:hover {
+  border-color: #009688 !important;
+}
+
+/* line 342, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-yellow, .w3-hover-border-yellow:hover {
+  border-color: #ffeb3b !important;
+}
+
+/* line 343, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-white, .w3-hover-border-white:hover {
+  border-color: white !important;
+}
+
+/* line 344, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-black, .w3-hover-border-black:hover {
+  border-color: black !important;
+}
+
+/* line 345, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-grey, .w3-hover-border-grey:hover, .w3-border-gray, .w3-hover-border-gray:hover {
+  border-color: #9e9e9e !important;
+}
+
+/* line 346, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-light-grey, .w3-hover-border-light-grey:hover, .w3-border-light-gray, .w3-hover-border-light-gray:hover {
+  border-color: #f1f1f1 !important;
+}
+
+/* line 347, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-dark-grey, .w3-hover-border-dark-grey:hover, .w3-border-dark-gray, .w3-hover-border-dark-gray:hover {
+  border-color: #616161 !important;
+}
+
+/* line 348, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-pale-red, .w3-hover-border-pale-red:hover {
+  border-color: #ffe7e7 !important;
+}
+
+/* line 348, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-pale-green, .w3-hover-border-pale-green:hover {
+  border-color: #e7ffe7 !important;
+}
+
+/* line 349, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-pale-yellow, .w3-hover-border-pale-yellow:hover {
+  border-color: #ffffcc !important;
+}
+
+/* line 349, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/w3.css */
+.w3-border-pale-blue, .w3-hover-border-pale-blue:hover {
+  border-color: #e7ffff !important;
+}
+
+/* line 3, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+/*
+HOMEPAGE
+*/
+/* line 12, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.bgimg {
+  background-position: center;
+  background-image: url("sharecareimg.jpg");
+  min-height: 60%;
+  filter: none !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #00bce4;
+}
+
+/* line 25, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.share-provider {
+  display: inline-block;
+  background-color: #ede0f7;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000000;
+  width: 12em;
+  height: 3em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-right: 0.75em;
+  margin-left: 0.6em;
+}
+
+/* line 43, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.share-provider:hover {
+  background-color: #e4d0f3;
+}
+
+/* line 47, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.share-provider:active {
+  background-color: #dbc1ef;
+}
+
+/*
+ADD PROVIDER FORMS
+*/
+/* line 55, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+label {
+  display: block;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* line 63, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+h4, .provider-rating-qs {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: #000000;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+}
+
+/* line 72, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.question-area {
+  display: block;
+  width: 70%;
+  background-color: #ede0f7;
+  margin: 0 auto;
+}
+
+/* line 81, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.provider-submit {
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin-left: 20%;
+  margin-bottom: 5em;
+}
+
+/* line 91, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.new-provider-form {
+  display: inline-block;
+  margin: 5% auto;
+}
+
+/* line 105, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+#provider_organization_name,
+#provider_first_name,
+#provider_last_name,
+#provider_address_line1,
+#provider_address_line2,
+#provider_city,
+#provider_province,
+#provider_area_code,
+#provider_waiting_period,
+#provider_phone_number {
+  display: block;
+  width: 28em;
+  background-color: #ffffff;
+  margin-top: 0.25em;
+  margin-bottom: 0.75em;
+}
+
+/* line 114, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.add-provider {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+/* line 121, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+#providers {
+  display: block;
+  width: 80%;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+/* line 128, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.main-form {
+  display: block;
+  width: 80%;
+  margin: 5% 5% auto;
+  column-count: 3;
+}
+
+/* line 135, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.copyright {
+  font-size: 10px;
+}
+
+/*
+PROVIDERS INDEX/SEARCH
+*/
+/* line 142, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.provider-index {
+  display: block;
+  width: 70%;
+  padding: 1em;
+  background-color: #ede0f7;
+  opacity: 0.75;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/* line 152, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.search-bar {
+  display: block;
+  margin-left: 20%;
+  margin-top: 5em;
+}
+
+/* line 159, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.search-bar-label {
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-left: 1em;
+}
+
+/* line 168, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+#search {
+  width: 50%;
+  height: 2em;
+}
+
+/*
+PROVIDER PROFILE
+*/
+/* line 178, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.rating-info {
+  display: inline-block;
+  vertical-align: top;
+  margin: auto;
+  width: 40%;
+}
+
+/* line 185, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.rating-by-user {
+  display: block;
+  float: right;
+  vertical-align: top;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: auto;
+  margin-bottom: 1em;
+}
+
+/* line 197, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.overall-rating {
+  display: block;
+  vertical-align: top;
+  font-size: 25px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: right;
+  margin-left: 5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+/* line 211, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.provider-info {
+  width: 95%;
+  margin: auto;
+}
+
+/* line 217, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.provider-reviews {
+  display: inline-block;
+  font-size: 26px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 16em;
+  margin-bottom: 0.75em;
+}
+
+/* line 228, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.create-review {
+  display: inline-block;
+  font-size: 26px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 18em;
+  margin-bottom: 0.75em;
+}
+
+/* line 239, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.create_review-fields {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* line 245, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+#review_comment {
+  display: inline-block;
+  width: 100%;
+  height: 5em;
+}
+
+/* line 252, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.actions {
+  margin-top: 1em;
+  margin-bottom: 5em;
+}
+
+/* line 257, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+img {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+/* line 264, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.provider-details {
+  display: inline-block;
+  width: 35%;
+  vertical-align: top;
+  margin-left: 3em;
+}
+
+/* line 271, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.provider-detail-name {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* line 278, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.provider-detail {
+  display: block;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* line 287, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+#review-list {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* line 293, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.review {
+  display: block;
+  padding: 1em;
+  background-color: #ede0f7;
+  opacity: 0.75;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/* line 303, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+#error_explaination, h4, ul {
+  color: red;
+}
+
+/*
+USER ACCOUNT PAGE
+*/
+/* line 312, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.account-heading {
+  color: #000000;
+}
+
+/* line 316, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+a.account-links {
+  display: block;
+}
+
+/* line 320, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.user-reviews {
+  display: inline-block;
+  width: 50%;
+}
+
+/* line 326, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.session-new {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+
+/* line 332, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.user-ratings {
+  display: inline-block;
+  width: 50%;
+}
+
+/* line 343, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.edit-review {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+/* line 351, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.delete-review {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 2em;
+}
+
+/*
+NAV
+*/
+/* line 363, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+li.userinfo {
+  display: block;
+  float: right;
+  padding-right: 5px;
+  color: #000000;
+}
+
+/*
+EDIT REVIEWS
+*/
+/* line 374, /Users/Securus/Webportfolio/careshare/app/assets/stylesheets/application.css.scss */
+.edit-review-heading {
+  color: #000000;
+}
