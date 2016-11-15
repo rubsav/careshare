@@ -1,0 +1,377 @@
+@import "w3";
+
+html, body {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -100px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 100px;
+  position: relative;
+}
+
+/*
+HOMEPAGE
+*/
+
+
+.bgimg {
+    text-align: center;
+    margin-top: 2em;
+}
+.bgimg img {
+	padding:25px;
+	border:5px solid white;
+	background-color: #7fddf1;	
+}
+
+/*
+ADD PROVIDER FORMS
+*/
+
+span {
+	border-radius: 2px;
+	padding: 5px;
+}
+
+label {
+	display: block;
+	width: 100%; 
+	font-family: 'Quicksand', sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+h4, .provider-rating-qs {
+	font-size: 20px;
+	font-family: 'Quicksand', sans-serif;
+	color: #000000;
+	font-weight: 700;
+	display: block;
+	width: 100%;
+}
+
+a {
+ text-decoration: none !important;
+}
+.links {
+	color: #7fddf1;
+}
+
+.question-area {
+	display: block;
+	width: 70%;
+	background-color: #00bce4;
+	margin: 0 auto;
+
+}
+
+.provider-submit {
+	display: inline-block;
+	text-align: center;
+	font-size: 20px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	margin-left: 20%;
+	margin-bottom: 5em;
+}
+
+.new-provider-form {
+	display: inline-block;
+	margin: 5% auto;	
+}
+
+#provider_organization_name, 
+#provider_first_name, 
+#provider_last_name, 
+#provider_address_line1, 
+#provider_address_line2,
+#provider_city,
+#provider_province,
+#provider_area_code,
+#provider_waiting_period,
+#provider_phone_number {
+	display: block;
+	width: 28em;
+	background-color: #ffffff;
+	margin-top: 0.25em;
+	margin-bottom: 0.75em;	
+	
+}
+
+.add-provider {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#providers {
+	display: block;
+	width: 100%;
+	margin-left: 18%;
+	margin-right: 18%;
+}
+
+.main-form {
+	display: block;
+	width: 80%;
+	margin: 5% 5% auto;
+	column-count: 3;
+}
+
+.copyright {
+	font-size: 10px;
+}
+
+/*
+PROVIDERS INDEX/SEARCH
+*/
+.provider-index {
+	display: block;
+	width: 70%;
+	padding: 1em;
+	background-color: #00bce4;
+	opacity: 0.75;
+	margin-bottom: 0.5em;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.search-bar {
+	display: block;
+	margin-left: 18%;
+	margin-top: 2em;
+
+}
+
+.search-bar-label {
+ 	display: inline-block;
+ 	font-size: 18px;
+	font-family: 'Quicksand', sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-left: 1em;
+}
+
+#search {
+	width: 50%;
+	height: 2em;
+}
+
+
+/*
+PROVIDER PROFILE
+*/
+
+.rating-info {
+	display: inline-block;
+	vertical-align: top;
+	margin: auto;
+	width: 40%;
+}
+
+.rating-by-user {
+	display: block;
+	float: right;
+	vertical-align: top;
+	font-size: 20px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	width: auto;
+	margin-bottom: 1em;	
+}
+
+.overall-rating {
+	display: block;
+	vertical-align: top;
+	font-size: 25px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: right;
+	
+	
+	margin-left: 5em;
+	margin-top: 0.25em;
+	margin-bottom: 0.5em;	
+}
+.provider-info {
+	width: 95%;
+	margin: auto;
+
+}
+
+.provider-reviews {
+	display: inline-block;
+	font-size: 26px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	
+	margin-left: 16em;
+	margin-bottom: 0.75em;
+}
+
+.create-review {
+	display: inline-block;
+	font-size: 26px;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-left: 18em;
+	margin-bottom: 0.75em;
+
+}
+
+.create_review-fields {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#review_comment {
+	display: inline-block;
+	width: 100%;
+	height: 5em;
+	
+}
+
+.actions {
+	margin-top: 1em;
+	margin-bottom: 5em;
+}
+
+.provider-info img {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+
+}
+
+.provider-details {
+	display: inline-block;
+	width: 35%;
+	vertical-align: top;
+	margin-left: 3em ;
+}
+
+.provider-detail-name {
+	margin-top: 0;
+	font-size: 30px;
+	font-weight: 700;
+
+}
+
+.provider-detail{
+	display: block;
+	vertical-align: top;
+	margin-top: 0;
+	margin-bottom: 0.5em;	
+
+}
+
+
+#review-list {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.review {
+	display: block;
+	padding: 1em;
+	background-color: #00bce4;
+	opacity: 0.75;
+	margin-bottom: 0.5em;
+	text-align: center;
+
+}
+
+#error_explaination, h4, ul{
+	color: red;
+}
+
+
+/*
+USER ACCOUNT PAGE
+*/
+
+.account-heading {
+	color: #000000;
+}
+
+a.account-links {
+	display: block;
+}
+
+.user-reviews {
+	display: inline-block;
+	width: 50%;
+
+}
+
+.session-new {
+	position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+.user-ratings {
+	display: inline-block;
+	width: 50%;
+
+}
+
+.user-rating {
+
+
+}
+
+.edit-review {
+	display: inline-block;
+	margin-top: 0;
+	margin-right: 2em;
+	margin-left: 2em;
+
+}
+
+.delete-review {
+	display: inline-block;
+	margin-top: 0;
+	margin-right: 2em;
+	
+}
+
+
+/*
+NAV
+*/
+
+li.userinfo {
+	display: block;
+	float: right;
+	padding-right: 5px;
+	color: #000000;
+}
+
+/*
+EDIT REVIEWS
+*/
+
+.edit-review-heading {
+	color: #000000;
+}
+
+
+
+
