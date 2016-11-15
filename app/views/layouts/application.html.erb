@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= favicon_link_tag 'favicon.ico' %>
   <title>CareShare</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -11,46 +12,43 @@
 </head>
 
 <body class="w3-light-grey">
-<header class="w3-display-container w3-grayscale-min" id="home">
+<header class="w3-display-container" id="home">
+  <nav class="main-nav">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s2">
+        <%= link_to 'About', root_path, class: "w3-btn-block w3-hover-green"%>
+      </div>
+       <div class="w3-col s3">
+        <%= link_to "Add & Rate your Caregiver", new_provider_path, class: "w3-btn-block w3-hover-green" %> 
+      </div>
+      <div class="w3-col s4">
+        <%= link_to "View All Caregiving Providers", providers_path, class: "w3-btn-block w3-hover-green" %> 
+      </div>
+      <div class="w3-col w3-padding s3">
+        <% if current_user %>
+          Signed in as <%= link_to current_user.username, user_path(current_user) %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
+        <% else %>
+          <%= link_to "Log in", new_session_path, class:"links" %> or <%= link_to "Sign up", new_user_path, class:"links" %>
+        <% end %>
+      </div>
+    </div>
+    
+       <% if flash[:notice] %>
+       <p id="notice"><%= flash[:notice] %></p>
+       <% end %>
 
-<!-- Links (sit on top) -->
-<nav class="main-nav">
-  <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s2">
-      <%= link_to 'About', root_path, class: "w3-btn-block w3-hover-white"%>
-    </div>
-     <div class="w3-col s3">
-      <%= link_to "Rate your Caregiving Provider", new_provider_path, class: "w3-btn-block w3-hover-white" %> 
-    </div>
-    <div class="w3-col s4">
-      <%= link_to "View All Caregiving Providers", providers_path, class: "w3-btn-block w3-hover-white" %> 
-    </div>
-    <div class="w3-col w3-padding s3">
-      <% if current_user %>
-        Signed in as <%= link_to current_user.username, user_path(current_user) %>. <%= link_to "Log out", session_path("current"), :method => :delete %>
-      <% else %>
-        <%= link_to "Log in", new_session_path %> or <%= link_to "Sign up", new_user_path %>
-      <% end %>
-    </div>
-  </div>
-  <ul>
-     <% if flash[:notice] %>
-     <p id="notice"><%= flash[:notice] %></p>
-     <% end %>
-
-     <% if flash[:alert] %>
-     <p id="alert"><%= flash[:alert] %></p>
-     <% end %>
-  </ul>
-</nav>
+       <% if flash[:alert] %>
+       <p id="alert"><%= flash[:alert] %></p>
+       <% end %>
+  </nav>
 </header>
+<div class="page-wrap">
 <%= yield %>
+</div>
 
-
-<!-- Footer -->
-<footer class="w3-bottom w3-center w3-large">
+<div class="w3-bottom w3-center site-footer">
   <p class="copyright">A review site by Ruben Avila Aguilar</p>
-</footer>
+</div>
 
 </body>
 </html>

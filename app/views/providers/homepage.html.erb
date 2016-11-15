@@ -1,12 +1,21 @@
-<div class="bgimg"></div>
+<div class="bgimg">
+	<%= image_tag 'heart.png',:size => '250x250' %>
+	<%= image_tag 'baby2.png',:size => '250x250' %>
+	<%= image_tag 'carriage.png',:size => '250x250' %>
+	<%= image_tag 'elderly.png',:size => '250x250' %>
+	<%= image_tag 'petz.png',:size => '250x250' %>
 
-<div class="w3-sand w3-grayscale w3-large">
-<!-- About Container -->
+</div>
+
+<div class="w3-light-grey w3-large">
 <div class="w3-container" id="about">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">About CareShare</span></h5>
-    <p></p>
-    <p></p>
+    <h5 class="w3-center"><span class="w3-tag w3-wide w3-padding-left w3-padding-right">About CareShare</span></h5>
+    <p>CareShare is a community website allowing users to Connect, Share and Rate their experiences with healthcare, child care, senior care, special needs, & pet care providers in their area. </p>
+    <p>CareShare ensures anonymity and provides a safe space for users to voice their concerns and suggestions regarding all caregiving professionals.</p>
+    <p>Caregivers can feel safe in knowing that all reviews and ratings are subject to screeining in order to avoid profanity and keep unecessary negativity to a minimum.</p>
+    <p>Please feel free to <%= link_to "Sign up", new_user_path %> and share your caregiving experience!</p>
+    <br>
   </div>
 </div>
 </div>
